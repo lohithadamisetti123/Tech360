@@ -1,0 +1,308 @@
+<html>
+    <head>
+        <title>HomePage</title>
+        <link rel="stylesheet" href="Tech360.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+       <!-- Header -->
+        <div class="header">
+            <div class="logo"><img width="130px" height="100px" src="./logo_iship-removebg-preview.png"/></div>
+             <div class="menu">
+                <a href="home.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="startup.html">Startups</a>
+                <a href="resume_html.html">Resumes</a>
+                <a href="internships.html">Hirings</a>
+                <a href="Tech360.html" style="color: #d4a339;text-decoration: none;">TechResources</a>
+                <a href="ContestTrack.html">ContestTrack</a>
+            </div>
+
+             <div class="right-group">
+                   <a href="index.html" class="logout" style="text-decoration: none;">Logout</a>
+    <div class="bar" onclick="openn()">&#9776;</div>
+  </div>
+        </div>
+
+        <!-- Slide Bar -->
+        <div class="slide-menu">
+            <div class="slide-logo">
+                <img width="100px" height="80px" src="logo.png"/>
+                <span onclick="cloose()">&times;</span>
+            </div>
+                <a href="TechHomePage.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="startup.html">Startups</a>
+                <a href="resume_html.html">Resumes</a>
+                <a href="internships.html">Hirings</a>
+                <a href="Tech360.html" style="color: #d4a339; text-decoration: none;">TechResources</a>
+                <a href="ContestTrack.html">ContestTrack</a>
+        </div>
+     <div class="overlay" onclick="cloose()"></div><br><br><br>
+     <!-- Road Map Section -->
+    <div class="roadmap-section">
+    <div class="roadmap">
+        <h1>RoadMaps</h1>
+        <p>This section consists of Foundational Course materials, Embedded interview questions and answers, Projects, Sample code where you can get started. These courses are targeted for entry level engineers.</p>
+    </div>
+    <div class="parent-grid">
+      <!-- grid1 -->
+        <div class="grid-item">
+            <img src="./Data-Structures-Algorithms-removebg-preview.png" alt="dsa_img">
+            <h3>Data Structures & Algorithms</h3>
+            <p>Learn Abstract Data Types (ADTs) to achieve information hiding. Optimize and select the right data structure for your job.</p>
+            <ul class="resource-list">
+              <li><a href="resouce-detail.html">Course Materials</a></li>
+              <li><a href="coming_soon.html">Algorithms</a></li>
+              <li><a href="dsa_project.html">Projects</a></li>
+              <li><a href="https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/">Popular Sheets</a></li>
+            </ul>
+            <button><a href="dsa_viewmore.html">View More</a></button>
+        </div>
+
+        <!-- grid2 -->
+
+       <div class="grid-item">
+         <img src="./c_iship-removebg-preview.png" alt="c_img">
+         <h3>C Programming</h3>
+         <p>Refer these resources to obtain quality and style in C programming. Gear up for hands-on programming on Embedded target.</p>
+        <ul class="resource-list">
+        <li><a href="c_prog.html">Course Materials</a></li>
+        <li><a href="coming_soon.html">Sample Code</a></li>
+        <li><a href="c_projects.html">Projects</a></li>
+        <li><a href="https://www.geeksforgeeks.org/c/c-programming-language/">Popular Sheets</a></li>
+       </ul>
+        <button class="view-more-btn" onclick="openModal('c')"><a href="c_viemore.html">View More</a></button>
+       </div>
+
+       <!-- gird3 -->
+        <div class="grid-item">
+            <img src="./C-Programming-removebg-preview.png" alt="cpp_img">
+            <h3>C++ Programming</h3>
+            <p>Learn Object-Oriented Programming (OOPS) concepts. Apply them by creating programs in C++ for building Embedded Systems.</p>
+            <ul class="resource-list">
+        <li><a href="cpp_prog.html">Course Materials</a></li>
+        <li><a href="coming_soon.html">Sample Code</a></li>
+        <!-- <li><a href="coming_soon.html">Assignments</a></li> -->
+        <li><a href="cpp_projects.html">Projects</a></li>
+        <li><a href="https://www.youtube.com/playlist?list=PLDzeHZWIZsToJ9zSl4-5BfOBzAR0fm--f">Popular Sheets</a></li>
+        </ul>
+            <button><a href="cpp_viemore.html">View More</a></button>
+        </div>
+
+        <!-- grid4 -->
+        <div class="grid-item">
+            <img src="./Python-Programming-removebg-preview.png" alt="python_img">
+            <h3>Python Programming</h3>
+            <p>Get to know about the versatile Python language by getting hands-on. Develop Multi-tasking applications suitable for IoT Gateway.</p>
+            <ul class="resource-list">
+        <li><a href="python.html">Course Materials</a></li>
+        <li><a href="coming_soon.html">Sample Code</a></li>
+        <!-- <li><a href="coming_soon.html">Assignments</a></li> -->
+        <li><a href="py_projects.html">Projects</a></li>
+        <li><a href="https://www.youtube.com/playlist?list=PLu0W_9lII9ajLcqRcj4PoEihkukF_OTzA">Popular Sheets</a></li>
+      </ul>
+            <button><a href="py_viewmore.html">View More</a></button>
+        </div>
+
+        <!-- grid5 -->
+        <div class="grid-item">
+          <img src="./java_prog-removebg-preview.png" alt="java_img">
+           <h3>Java Programming</h3>
+           <p>Master Java fundamentals including OOP concepts, multithreading, exception handling, and JDBC. Build robust applications for desktop and web platforms.</p>
+           <ul class="resource-list">
+        <li><a href="java.html">Course Materials</a></li>
+        <li><a href="coming_soon.html">Sample Code</a></li>
+        <!-- <li><a href="coming_soon.html">Assignments</a></li> -->
+        <li><a href="java_projects.html">Projects</a></li>
+        <li><a href="https://github.com/apna-college/Alpha">Popular Sheets</a></li>
+    </ul>
+            <button><a href="java_viewmore.html">View More</a></button>
+       </div>
+
+       <!-- grid6 -->
+      <div class="grid-item">
+        <img src="./html_csss_js-removebg-preview.png" alt="html_img">
+        <h3>HTML, CSS & JS</h3>
+        <p>Learn to build responsive and interactive websites using HTML for structure, CSS for styling, and JavaScript for dynamic functionality.</p>
+        <ul class="resource-list">
+        <li><a href="html_css_js.html">Course Materials</a></li>
+        <li><a href="coming_soon.html">Sample Code</a></li>
+        <!-- <li>Assignments</li> -->
+        <li><a href="html_css_js_projects.html">Projects</a></li>
+        <li><a href="https://www.w3schools.com/html/">Popular Sheets</a></li>
+    </ul>
+        <button><a href="html_css_js_viewmore.html">View More</a></button>
+      </div>
+
+      <!-- grid7 -->
+    <div class="grid-item">
+  <img src="./artworks-P45RXKtZYEn7PeSS-3lIiMw-t500x500 - Copy.jpg" alt="dbms_img" style="width:200px; height:auto;">
+  <h3>Database Management System (DBMS)</h3>
+  <p>Master the fundamentals of databases including data models, normalization, transactions, indexing, and SQL. Ideal for interview prep and backend development.</p>
+  <ul class="resource-list">
+    <li><a href="dbms.html">Course Materials</a></li>
+    <li><a href="coming_soon.html"> sample code</a></li>
+    <li><a href="https://www.geeksforgeeks.org/dbms/dbms/">Popular Sheet</a></li>
+    <li><a href="dbms_projects.html">Projects</a></li>
+    <!-- <li><a href="coming_soon.html">Assignments</a></li> -->
+    <!-- <li><a href="coming_soon.html">Mini Projects</a></li> -->
+  </ul>
+  <button><a href="dbms_overview.html">View More</a></button>
+</div>
+
+
+<!-- grid8 -->
+ <div class="grid-item">
+    <img src="./sql_img-removebg-preview.png" alt="sql-image" style="margin-top:30px; width:300px; height:auto;">
+    <h3>SQL(Structured Query Language)</h3>
+    <p>Master the fundamentals of SQL including data querying, joins, subqueries, and database management to effectively handle relational data.</p>
+    <ul class="resource-list">
+        <li><a href="sql.html">Course Materials</a></li>
+        <li><a href="coming_soon.html">Sample Code</a></li>
+        <!-- <li><a href="coming_soon.html">Assignments</a></li> -->
+         <li><a href="https://leetcode.com/studyplan/">Popular Sheets</a></li>
+        <li><a href="sql_projects.html">Projects</a></li>
+    </ul>
+    <button><a href="sql_viewmore.html">View More</a></button>
+</div>
+
+<!-- grid9 -->
+
+<div class="grid-item">
+    <img src="./aptitude.png" alt="aptitude_img" style="margin-top:0px;">
+    <h3>Aptitude, Verbal & Reasoning</h3>
+    <p>Enhance your problem-solving skills with quantitative aptitude, logical reasoning, and verbal ability to excel in competitive exams and interviews.</p>
+    <ul class="resource-list">
+  <li><a href="ap_ver_reason.html">Course Materials</a></li>
+  <li><a href="coming_soon.html">Sample Code</a></li>
+  <li><a href="https://www.indiabix.com/aptitude/questions-and-answers/">Popular Sheets</a></li>
+  <li><a href="https://www.geeksforgeeks.org/aptitude/aptitude-for-placements/">Interview Preparation</a></li>
+</ul>
+    <button><a href="ap_viewmore.html">View More</a></button>
+</div>
+   </div>
+     </div>
+     <!-- footer -->
+      <footer class="footer">
+                <div class="border"></div>
+        <div class="footer-col about">
+            <h2>Tech360</h2>
+            <p>Empowering retail excellence through innovative solutions and comprehensive training programs. Building the future of retail, one professional at a time.</p>
+            <div class="social">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col quick-links">
+            <h2>Quick Links</h2>
+            <ul>
+            <li><a href="#">→  Home</a></li>
+            <li><a href="#">→  Projects</a></li>
+            <li><a href="#">→  Startups</a></li>
+            <li><a href="#">→  Resumes</a></li>
+            <li><a href="#">→  Hirings</a></li>
+            <li><a href="#">→  TechResources</a></li>
+            <li><a href="#">→  ContestTrack</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col contact">
+            <h2>Contact Us</h2>
+            <ul>
+            <li><i class="fas fa-map-marker-alt"></i>Jubli Hills,Hyderabad,India</li>
+            <li><i class="fas fa-phone"></i> +91 8757728679</li>
+            <li><i class="fas fa-envelope"></i> tech360@gmail.com</li>
+            </ul>
+        </div>
+
+        <div class="footer-col update">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter for the latest updates and insights.</p>
+        <form id="subscribeForm" action="https://formsubmit.co/damisettilohitha@gmail.com" method="POST">
+        <input type="email" name="email" id="emailInput" required placeholder="Enter your email" />
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="">
+        <button type="submit">Subscribe</button>
+        </form>
+
+        </div>
+         <div class="footer-bottom">
+        <p>© 2025 <span style="color:#d4a339" >Tech360 Pvt Ltd</span>. All rights reserved.</p>
+        </div>
+    </footer>
+        <!-- slide bar script -->
+    <script>
+      function openn() {
+            document.getElementsByClassName("slide-menu")[0].style.left = "0px";
+            document.querySelector(".overlay").style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+
+        function cloose() {
+            document.getElementsByClassName("slide-menu")[0].style.left = "-250px";
+            document.querySelector(".overlay").style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+  const modalOverlay = document.getElementById("modal-overlay");
+  const modalSlide = document.getElementById("modal-slide");
+  const modalTitle = document.getElementById("modal-title");
+  const modalContent = document.getElementById("modal-content");
+
+  const detailsMap = {
+    "Data Structures & Algorithms": "This section includes advanced DSA topics such as trees, graphs, dynamic programming, and problem-solving strategies for interviews.",
+    "C Programming": "Dive deep into pointers, memory management, bitwise operations, and embedded systems development in C.",
+    "C++ Programming": "Explore OOPs, STL, templates, and performance-oriented programming in C++ suited for real-time systems.",
+    "Python Programming": "Learn Python's use in automation, scripting, data science, and creating IoT gateway software.",
+    "Java Programming": "Understand core Java, collections, multithreading, and back-end development with JDBC and servlets.",
+    "HTML, CSS & JS": "Build complete web pages with interactive elements, responsive designs, and front-end logic.",
+    "SQL": "Master advanced SQL queries, indexing, optimization, and database schema design.",
+    "Aptitude, Verbal & Reasoning": "Practice placement-level aptitude problems with detailed solutions and strategy tips."
+  };
+
+  // Attach event listener to all "View More" buttons
+  document.querySelectorAll(".grid-item button").forEach(button => {
+    button.addEventListener("click", function () {
+      const title = this.parentElement.querySelector("h3").innerText;
+      modalTitle.innerText = title;
+      modalContent.innerText = detailsMap[title] || "More content coming soon...";
+      modalOverlay.style.display = "block";
+      modalSlide.classList.add("show");
+    });
+  });
+
+  // Close modal function
+  function closeModal() {
+    modalOverlay.style.display = "none";
+    modalSlide.classList.remove("show");
+  }
+
+  // Close modal when clicking on the overlay
+  modalOverlay.addEventListener("click", closeModal);
+
+   const form = document.getElementById("subscribeForm");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const email = document.getElementById("emailInput").value.trim();
+    if (email === "") {
+      alert("Please enter a valid email.");
+      return;
+    }
+    alert("Thank you for subscribing!🎉 We will keep you updated with our latest news.");
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+    })
+    .then(() => {
+      document.getElementById("emailInput").value = "";
+    });
+  });
+    </script>
+    
+    </body>
+</html>

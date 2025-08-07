@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="resume.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo"><img width="130px" height="100px" src="logo.png" alt="Logo" /></div>
+
+           <div class="menu">
+                <a href="home.html" >Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="startup.html">Startups</a>
+                <a href="resume_html.html" style="color: #d4a339;text-decoration: none;">Resumes</a>
+                <a href="internships.html">Hirings</a>
+                <a href="Tech360.html">TechResources</a>
+                <a href="ContestTrack.html">ContestTrack</a>
+            </div>
+
+             <div class="right-group">
+                   <a href="index.html" class="logout" style="text-decoration: none;">Logout</a>
+    <div class="bar" onclick="openn()">&#9776;</div>
+  </div>
+        </div>
+
+        <!-- Slide Bar -->
+        <div class="slide-menu">
+            <div class="slide-logo">
+                <img width="100px" height="80px" src="logo.png"/>
+                <span onclick="cloose()">&times;</span>
+            </div>
+                <a href="home.html" style="color: #d4a339;">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="startup.html">Startups</a>
+                <a href="resume_html.html">Resumes</a>
+                <a href="internships.html">Hirings</a>
+                <a href="Tech360.html">TechResources</a>
+                <a href="ContestTrack.html">ContestTrack</a>
+        </div>
+    <div class="overlay" onclick="cloose()"></div>
+    <main class="resume-section">
+        <div class="resume-hub">
+            <h2>Build a Resume That Gets Noticed</h2>
+            <p class="section-subtitle">Follow our expert-guided steps to craft a resume that stands out to recruiters
+                and clears automated screening systems (ATS).</p>
+
+            <div class="hub-grid">
+                <div class="hub-card">
+                    <div class="hub-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h4>ATS-Optimized</h4>
+                    <p>Our templates are designed to be easily parsed by Applicant Tracking Systems, ensuring your
+                        resume reaches a human reviewer.</p>
+                </div>
+                <div class="hub-card">
+                    <div class="hub-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.905 59.905 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0l-2.072-1.036A48.22 48.22 0 0112 5.25c4.707 0 9.12 1.573 12.73 4.29l-2.072 1.036" />
+                        </svg>
+                    </div>
+                    <h4>Expert Content</h4>
+                    <p>Learn how to phrase your achievements and skills to demonstrate maximum impact and align with job
+                        descriptions.</p>
+                </div>
+                <div class="hub-card">
+                    <div class="hub-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.572L16.5 21.75l-.398-1.178a3.375 3.375 0 00-2.3-2.3L12.75 18l1.178-.398a3.375 3.375 0 002.3-2.3L16.5 14.25l.398 1.178a3.375 3.375 0 002.3 2.3l1.178.398-1.178.398a3.375 3.375 0 00-2.3 2.3z" />
+                        </svg>
+                    </div>
+                    <h4>Modern Designs</h4>
+                    <p>Choose from a gallery of professional, visually appealing templates that command attention for
+                        all the right reasons.</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 id="placed-resumes"> Placed Professionals</h3>
+        <div class="resume-grid">
+            <div class="resume-card" data-name="Ananthalakshmi" data-status="Placed" data-company="Wipro" data-ats="95"
+                data-story="As a Senior Associate, I led an analysis of a client's Order-to-Cash cycle. By visualizing timestamp data from SAP and Salesforce, I discovered a major bottleneck in the manual credit approval stage that accounted for 60% of delays. My recommendation to implement an RPA bot cut the cycle time by 40%, reduced rework by 95%, and improved the client's quarterly cash flow by an estimated ₹1.5 Crore."
+                data-img-src="anu_resume.jpg" data-download-url="anu_resume.pdf"
+                data-overleaf-url="https://www.overleaf.com/project/688aee56665c8de4493d4899">
+                <div class="card-image-container"><img src="anu_resume.jpg" alt="Ananthalakshmi_resume"><span
+                        class="placement-badge placed">Placed at Microsoft</span></div>
+                <div class="card-content">
+                    <h3>Ananthalakshmi</h3>
+                    <p>Senior Associate, Wipro</p>
+                </div>
+            </div>
+            <div class="resume-card" data-name="Sankar desamsetti" data-status="placed" data-company="codechef"
+                data-ats="92"
+                data-story="When I joined CODEMIND, the platform was in a growth phase, aiming to expand its user base of competitive programmers and students preparing for technical interviews. The primary challenge was two-fold: the existing library of coding problems was limited, and there were concerns about the quality and consistency of the test cases."
+                data-img-src="sankar_resume.jpg" data-download-url="sankar_resume.pdf"
+                data-overleaf-url="https://www.overleaf.com/project/688af0e835996938b96b57c3">
+                <div class="card-image-container"><img src="Sankar_resume.jpg" alt="Sankar_resume"><span
+                        class="placement-badge placed">intern at Codechef</span></div>
+                <div class="card-content">
+                    <h3>Sankar desamsetti</h3>
+                    <p>Problem Setter,Codechef</p>
+                </div>
+            </div>
+            <div class="resume-card" data-name="Lalitha Devi Gandi" data-status="Placed" data-company="HP" data-ats="95"
+                data-story="As a Data Analyst at HP,I investigated a high volume of 'Wi-Fi connectivity' complaints for a new OfficeJet printer. By correlating customer support logs with anonymized device telemetry, I discovered that 75% of failures were linked to a specific router brand. This insight led to a targeted firmware patch that cut support calls by 60% and prevented a costly product recall."
+                data-img-src="lalitha.jpg" data-download-url="lalitha.pdf"
+                data-overleaf-url="https://www.overleaf.com/project/688af0e835996938b96b57c3">
+                <div class="card-image-container"><img src="lalitha.jpg" alt="Lalitha Devi Gandi Resume"><span
+                        class="placement-badge placed">Placed at HP</span></div>
+                <div class="card-content">
+                    <h3>Lalitha Devi Gandi</h3>
+                    <p>Data Analyst,HP</p>
+                </div>
+            </div>
+            <div class="resume-card" data-name="RekhaKorubothu" data-status="Placed" data-company="Myntra" data-ats="94"
+                data-story="As an SDE on the Checkout team, I was tasked with tackling high latency in our 'Add to Cart' API during major sale events like the End of Reason Sale. Using performance profiling tools, I identified an inefficient database query and a blocking logging call as the primary bottlenecks. I led the effort to refactor the query, implemented a Redis caching layer for inventory checks, and made the logging asynchronous. This initiative successfully reduced the API's p95 latency by 70% and increased its throughput by 50%, ensuring system stability and a seamless user experience during our most critical sales periods."
+                data-img-src="reka.jpg" data-download-url="reka.pdf"
+                data-overleaf-url="https://www.overleaf.com/project/688af0e835996938b96b57c3">
+                <div class="card-image-container"><img src="reka.jpg" alt="reka Resume"><span
+                        class="placement-badge placed">Placed at Myntra</span></div>
+                <div class="card-content">
+                    <h3>RekhaKorubothu</h3>
+                    <p>SDE,Myntra</p>
+                </div>
+            </div>
+
+            <div class="resume-card" data-name="Prabu Teja" data-status="Placed" data-company="Darwin-Box" data-ats="91"
+                data-story="As an SDE, I was tasked with fixing a critical performance issue where the employee report generation API was timing out for our largest enterprise clients. By profiling the service, I identified and resolved an N+1 query bottleneck and high memory usage. I led the effort to refactor the backend logic to use an optimized SQL query and implemented a streaming response, which cut the API response time by 90% and eliminated all timeouts, significantly improving client satisfaction and system stability."
+                data-img-src="prabu_teja.jpg" data-download-url="prabu_teja.pdf"
+                data-overleaf-url="https://www.overleaf.com/project/688af0e835996938b96b57c3">
+                <div class="card-image-container"><img src="prabu_teja.jpg" alt="Sneha Rao Resume"><span
+                        class="placement-badge placed">Placed at Darwin-Box</span></div>
+                <div class="card-content">
+                    <h3>Prabu Teja</h3>
+                    <p>Data Specialist,Darwin-Box</p>
+                </div>
+            </div>
+            <div class="resume-card" data-name="Rama Krishna" data-status="Placed" data-company="Amazon" data-ats="94"
+                data-story="As an SDE, I identified a key inefficiency where delivery partners were assigned randomly to orders. I took ownership of developing a 'Smart Delivery Allocation' microservice that polls multiple delivery partner APIs in real-time. The service uses an algorithm to select the most optimal partner based on a weighted score of cost, speed, and serviceability for a given order's route and package size. The launch of this service successfully reduced last-mile delivery costs for our retail clients by an average of 12% and improved the on-time delivery rate by 8%."
+                data-img-src="krishna.jpg" data-download-url="krishna.pdf"
+                data-overleaf-url="https://www.overleaf.com/project/688af0e835996938b96b57c3">
+                <div class="card-image-container"><img src="krishna.jpg" alt="krishna Resume"><span
+                        class="placement-badge placed">Placed at Amazon</span></div>
+                <div class="card-content">
+                    <h3>Rama Krishna</h3>
+                    <p>SDE,Amazon</p>
+                </div>
+            </div>
+            <div class="resume-card" data-name="Sathwika Sabbella" data-status="Placed" data-company="Zopsmart"
+                data-ats="95"
+                data-story="As an SDE, I identified a key inefficiency where delivery partners were assigned randomly to orders. I took ownership of developing a 'Smart Delivery Allocation' microservice that polls multiple delivery partner APIs in real-time. The service uses an algorithm to select the most optimal partner based on a weighted score of cost, speed, and serviceability for a given order's route and package size. The launch of this service successfully reduced last-mile delivery costs for our retail clients by an average of 12% and improved the on-time delivery rate by 8%."
+                data-img-src="sabella.jpg" data-download-url="sabella.pdf"
+                data-overleaf-url="https://www.overleaf.com/project/688af0e835996938b96b57c3">
+                <div class="card-image-container"><img src="sabella.jpg" alt="Anika Reddy Resume"><span
+                        class="placement-badge placed">Placed at Zopsmart</span></div>
+                <div class="card-content">
+                    <h3>Sathwika Sabbella</h3>
+                    <p>Senior Associate,Zopsmart</p>
+                </div>
+            </div>
+            <div class="resume-card" data-name="Aditya kumar" data-status="Placed" data-company="Microsoft"
+                data-ats="94"
+                data-story="As an SDE, I identified a key inefficiency where delivery partners were assigned randomly to orders. I took ownership of developing a 'Smart Delivery Allocation' microservice that polls multiple delivery partner APIs in real-time. The service uses an algorithm to select the most optimal partner based on a weighted score of cost, speed, and serviceability for a given order's route and package size. The launch of this service successfully reduced last-mile delivery costs for our retail clients by an average of 12% and improved the on-time delivery rate by 8%."
+                data-img-src="aditya.jpg" data-download-url="aditya.pdf"
+                data-overleaf-url="https://www.overleaf.com/project/688af0e835996938b96b57c3">
+                <div class="card-image-container"><img src="aditya.jpg" alt="Aditya kumar Resume"><span
+                        class="placement-badge placed">Placed at Microsoft</span></div>
+                <div class="card-content">
+                    <h3>Aditya kumar</h3>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <h3 id="undergrad-resumes"> Undergraduate Stars</h3>
+        <div class="resume-grid">
+            <div class="resume-card" data-name="Sankar Talatam" data-status="Undergraduate" data-ats="88"
+                data-story="Final-year Computer Science student specializing in Artificial Intelligence and Machine Learning, with a proven ability to develop end-to-end ML projects. Experienced in data preprocessing, feature engineering, and deploying deep learning models using Python, TensorFlow, and PyTorch. Currently developing a final-year project in [Mention Your Project Area, e.g., real-time object detection]. Seeking a challenging full-time Machine Learning Engineer or AI Engineer role starting June 2026 to build robust and scalable AI solutions."
+                data-img-src="sankarT.jpg" data-download-url="sankarT.pdf"
+                data-overleaf-url="https://www.overleaf.com/project/688afcb8cecbb60339a68b82">
+                <div class="card-image-container"><img src="sankarT.jpg" alt="sankar Resume"><span
+                        class="placement-badge undergrad">Undergraduate</span></div>
+                <div class="card-content">
+                    <h3>Sankar Talatam</h3>
+                    <p>Computer Science and <br>Engineering</p>
+                </div>
+            </div>
+            <div class="resume-card" data-name="Sushmita Dasari" data-status="Undergraduate" data-ats="92"
+                data-story="A motivated third-year Computer Science student with a strong passion for Artificial Intelligence and Machine Learning. Proficient in Python and skilled in using libraries like TensorFlow, PyTorch, and Scikit-learn to build and train predictive models. Eager to secure a challenging internship to apply theoretical knowledge to solve real-world problems and contribute to an innovative team."
+                data-img-src="sushmi.jpg" data-download-url="sushmi_resume.pdf"
+                data-overleaf-url="https://www.overleaf.com/project/688afcb8cecbb60339a68b82">
+                <div class="card-image-container"><img src="sushmi.jpg" alt="sushmi_resume Resume"><span
+                        class="placement-badge undergrad">Undergraduate</span></div>
+                <div class="card-content">
+                    <h3>Sushmita Dasari</h3>
+                    <p>Artificial Intelligence and Machine Learning</p>
+                </div>
+            </div>
+            <div class="resume-card" data-name="Lohitha Damisetti" data-status="Undergraduate" data-ats="82"
+                data-story="Detail-oriented third-year Data Science student with a passion for uncovering hidden stories within data. Proficient in SQL, Python (Pandas, Matplotlib, Seaborn), and data visualization tools like Tableau. Experienced in performing Exploratory Data Analysis (EDA) and cleaning complex datasets through academic projects. Seeking a challenging Data Analyst or Data Science Internship to apply my analytical and visualization skills to solve real-world business problems."
+                data-img-src="lohitha.jpg" data-download-url="lohitha.pdf"
+                data-overleaf-url="https://www.overleaf.com/project/688afcb8cecbb60339a68b82">
+                <div class="card-image-container"><img src="lohitha.jpg" alt="Lohitha Damisetti"><span
+                        class="placement-badge undergrad">Undergraduate</span></div>
+                <div class="card-content">
+                    <h3>Lohitha Damisetti</h3>
+                    <p>Artificial Intelligence and Data Science</p>
+                </div>
+            </div>
+            <div class="resume-card" data-name="Charmi Gudala" data-status="Undergraduate" data-ats="85"
+                data-story="A dedicated third-year Electrical and Electronics Engineering student with a strong interest in power systems and renewable energy. Possesses a solid understanding of power generation, transmission, and distribution principles. Familiar with electrical machine operation and power system analysis using software like MATLAB/Simulink and ETAP. Seeking a challenging internship in the power sector to gain practical experience in grid operations, substation engineering, or solar power projects."
+                data-img-src="ch.jpg" data-download-url="Charmi.pdf"
+                data-overleaf-url="https://www.overleaf.com/project/688afcb8cecbb60339a68b82">
+                <div class="card-image-container"><img src="ch.jpg" alt="Charmi Resume"><span
+                        class="placement-badge undergrad">Undergraduate</span></div>
+                <div class="card-content">
+                    <h3>Charmi Gudala</h3>
+                    <p>Electrical and Electronics Engineering</p>
+                </div>
+            </div>
+
+            <div class="resume-card" data-name="Dhana Siri" data-status="Undergraduate" data-ats="86"
+                data-story="A motivated third-year Electronics and Communication Engineering student with a strong passion for Embedded Systems and the Internet of Things (IoT). Hands-on experience with C/C++ programming, microcontroller platforms (Arduino, STM32), and interfacing with sensors and wireless modules (Wi-Fi, Bluetooth). Eager to secure an internship to apply my knowledge of hardware-software integration and contribute to the development of innovative electronic products."
+                data-img-src="dhana_siri.jpg" data-download-url="dhana_siri.pdf"
+                data-overleaf-url="https://www.overleaf.com/project/688afcb8cecbb60339a68b82">
+                <div class="card-image-container"><img src="dhana_siri.jpg" alt="Dhana Resume"><span
+                        class="placement-badge undergrad">Undergraduate</span></div>
+                <div class="card-content">
+                    <h3>Dhana Koppisetti</h3>
+                    <p>Electronics and Communication Engineering</p>
+                </div>
+            </div>
+
+            <div class="resume-card" data-name="Boomika" data-status="Undergraduate" data-ats="88"
+                data-story="Final-year Data Science student with proven expertise in managing end-to-end data projects—from extracting and cleaning raw data with SQL and Python to building predictive models and presenting actionable recommendations. Proficient in machine learning, statistical modeling, and data visualization (Tableau/Power BI). Looking for a full-time Data Scientist or Product Analyst position to apply my comprehensive skill set to solve complex challenges and deliver data-informed insights."
+                data-img-src="boomika.jpg" data-download-url="boomika.pdf"
+                data-overleaf-url="https://www.overleaf.com/project/688afcb8cecbb60339a68b82">
+                <div class="card-image-container"><img src="boomika.jpg" alt="boomika Resume"><span
+                        class="placement-badge undergrad">Undergraduate</span></div>
+                <div class="card-content">
+                    <h3>Boomika</h3>
+                    <p>Artificial Intelligence and Data Science</p>
+                </div>
+            </div>
+            <div class="resume-card" data-name="Saurabh Gupta" data-status="Undergraduate" data-ats="82"
+                data-story="A detail-oriented third-year Civil Engineering student with a strong interest in Structural Analysis and Design. Proficient in AutoCAD with a solid understanding of structural mechanics, Reinforced Concrete (RCC), and steel design principles according to IS codes. Eager to secure a summer internship as a Structural Design Trainee to apply my theoretical knowledge to real-world building and infrastructure projects."
+                data-img-src="sushmi.jpg" data-download-url="sushmi.pdf"
+                data-overleaf-url="https://www.overleaf.com/project/688afcb8cecbb60339a68b82">
+                <div class="card-image-container"><img src="gupta.jpg" alt="Karan Desai Resume"><span
+                        class="placement-badge undergrad">Undergraduate</span></div>
+                <div class="card-content">
+                    <h3>Saurabh Gupta</h3>
+                    <p>Civil Engineering <br> student</p>
+                </div>
+            </div>
+            <div class="resume-card" data-name="Sushank Singh" data-status="Undergraduate" data-ats="86"
+                data-story="Final-year Mechanical Engineering student specializing in Machine Design and CAE. My final-year project involves the design and Finite Element Analysis (FEA) of a custom gearbox using SolidWorks and Ansys to optimize for stress and durability. Expertise in CAD/CAE tools, with in-depth knowledge of Geometric Dimensioning & Tolerancing (GD&T) and material selection. Seeking a full-time Graduate Engineer Trainee (GET) or Mechanical Design Engineer role starting June 2026."
+                data-img-src="sushank.png" data-download-url="sushank.pdf"
+                data-overleaf-url="https://www.overleaf.com/project/688afcb8cecbb60339a68b82">
+                <div class="card-image-container"><img src="sushank.png" alt="Divya Murthy Resume"><span
+                        class="placement-badge undergrad">Undergraduate</span></div>
+                <div class="card-content">
+                    <h3>Sushank Singh</h3>
+                    <p>Mechanical Engineering <br>student</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="border"></div>
+        <div class="footer-col about">
+            <h2>Tech360</h2>
+            <p>Empowering retail excellence through innovative solutions and comprehensive training programs. Building
+                the future of retail, one professional at a time.</p>
+            <div class="social">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col quick-links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="#">→ Home</a></li>
+                <li><a href="#">→ Projects</a></li>
+                <li><a href="#">→ Startups</a></li>
+                <li><a href="#">→ Resumes</a></li>
+                <li><a href="#">→ Hirings</a></li>
+                <li><a href="#">→ TechResources</a></li>
+                <li><a href="#">→ ContestTrack</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col contact">
+            <h2>Contact Us</h2>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i>Jubilee Hills, Hyderabad, India</li>
+                <li><i class="fas fa-phone"></i> +91 8757728679</li>
+                <li><i class="fas fa-envelope"></i> tech360@gmail.com</li>
+            </ul>
+        </div>
+
+        <div class="footer-col update">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter for the latest updates and insights.</p>
+            <form id="subscribeForm" action="https://formsubmit.co/your-email@example.com" method="POST">
+                <input type="email" name="email" id="emailInput" required placeholder="Enter your email" />
+                <input type="hidden" name="_captcha" value="false">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 <span style="color:#d4a339">Tech360 Pvt Ltd</span>. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="resume-modal" class="modal">
+        <div class="modal-content">
+            <button id="modal-close-btn" class="modal-close-btn">&times;</button>
+            <div class="modal-grid">
+                <div class="modal-image-container">
+                    <img id="modal-img" src="" alt="Resume Preview">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modal-name"></h2>
+                    <span id="modal-status-badge" class="placement-badge"></span>
+                    <p id="modal-story"></p>
+
+                    <div class="ats-info">
+                        <div class="ats-info-header">
+                            <span>🤖 Applicant Tracking System (ATS) Score</span>
+                            <span id="modal-ats-score"></span>
+                        </div>
+                        <div class="ats-score-bar">
+                            <div id="modal-ats-fill" class="ats-score-fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="card-actions">
+                        <a id="modal-download-btn" href="#" download class="action-btn btn-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                            </svg>
+                            Download
+                        </a>
+                        <a id="modal-overleaf-btn" href="#" target="_blank" class="action-btn btn-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+                            </svg>
+                            Overleaf Template
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="resume.js"></script>
+</body>
+
+</html>

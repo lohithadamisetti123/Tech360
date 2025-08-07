@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Resource Details - Python Programming</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin-top: 40px;
+      background-color: #fffbe7;
+      padding: 40px;
+      color: #333;
+    }
+
+    .parent {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 30px;
+      background: linear-gradient(135deg, #f0c36d, #fff9e0, #f0c36d);
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      flex-wrap: wrap;
+    }
+
+    .title {
+      max-width: 600px;
+      flex: 1;
+    }
+
+    h1 {
+      color: #202020;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .title p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    .dsa-img img {
+      width: 100%;
+      max-width: 650px;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .dsa-img img:hover {
+      transform: scale(1.25);
+      cursor: pointer;
+    }
+
+    .blur {
+      filter: blur(5px);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background-color: #fffbe7;
+      padding: 40px;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 700px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      animation: slideIn 0.3s ease-out;
+      overflow-y: auto;
+      max-height: 80vh;
+    }
+
+    .modal-content h2 {
+      margin-top: 20px;
+      color: #333300;
+    }
+
+    .modal-content ul {
+      margin-left: 20px;
+      line-height: 1.6;
+    }
+
+    .modal-close {
+      text-align: right;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    #openModal {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #333300;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #openModal:hover {
+      background-color: #555500;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .parent {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 30px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .title p {
+        font-size: 1rem;
+      }
+
+      .dsa-img img {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="title">
+      <h1>Python Programming</h1>
+      <p>
+        Python is a high-level, versatile, and easy-to-read programming language that's widely used in web development, automation, data science, AI/ML, and more. Its simplicity and readability make it ideal for both beginners and professionals.
+      </p>
+      <p>
+        This course starts with Python basics such as syntax, variables, and control structures, and progresses to more advanced topics like functions, OOP, file handling, modules, and standard libraries.
+      </p>
+      <p>
+        By the end of this course, you will be able to write efficient Python programs, solve coding problems, and create small real-world projects confidently.
+      </p>
+    </div>
+
+    <div class="dsa-img">
+      <img src="https://i.pinimg.com/originals/5a/bf/07/5abf0747ac98bff78b98ccea1122c32b.gif" alt="Python Programming Image" style="width:300px; height:auto;" />
+      <button id="openModal">View Course Info</button>
+    </div>
+  </div>
+
+  <div class="modal" id="modalOverlay">
+    <div class="modal-content">
+      <div class="modal-close" id="closeModal">&times;</div>
+
+      <h2>COURSE OBJECTIVES:</h2>
+      <ul>
+        <li>Learn Python syntax and core programming concepts</li>
+        <li>Master control structures, functions, and OOP in Python</li>
+        <li>Work with file I/O, exception handling, and libraries</li>
+        <li>Solve logical problems using Python</li>
+        <li>Develop small projects and scripts for automation</li>
+      </ul>
+
+      <h2>TARGET AUDIENCE:</h2>
+      <ul>
+        <li>Beginners with no prior coding experience</li>
+        <li>Students and professionals switching to Python</li>
+        <li>Anyone interested in automation, scripting, or backend development</li>
+      </ul>
+
+      <h2>PREREQUISITE:</h2>
+      <ul>
+        <li>Basic familiarity with programming is helpful but not mandatory</li>
+        <li>Logical thinking and problem-solving mindset</li>
+      </ul>
+
+      <h2>PLATFORM:</h2>
+      <ul>
+        <li>Interpreter – CPython / Anaconda / IDLE / Python 3.x+</li>
+        <li>Editor – VS Code / PyCharm / Jupyter Notebook</li>
+        <li>OS – Windows, Linux, or Mac</li>
+      </ul>
+
+      <h2>RESOURCE DETAILS:</h2>
+      <ul>
+        <li><strong>Course Materials:</strong> Comprehensive notes and slide decks covering Python basics, control flow, functions, modules, OOP, file handling, and libraries.</li>
+        <li><strong>Sample Code:</strong> Clean, commented Python scripts illustrating syntax, loops, recursion, functions, file I/O, and common Pythonic patterns.</li>
+        <li><strong>Assignments:</strong> Hands-on coding problems and practice tasks to reinforce each concept taught during the course.</li>
+        <li><strong>Projects:</strong> Mini projects like To-Do List App, Calculator, Number Guessing Game, or API-based Data Fetcher to apply skills in real-world scenarios.</li>
+      </ul>
+
+    </div>
+  </div>
+
+  <script>
+    const openBtn = document.getElementById('openModal');
+    const parent = document.querySelector('.parent');
+    const modal = document.getElementById('modalOverlay');
+    const closeBtn = document.getElementById('closeModal');
+
+    openBtn.addEventListener('click', () => {
+      modal.style.display = 'flex';
+      parent.classList.add('blur');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+      parent.classList.remove('blur');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+        parent.classList.remove('blur');
+      }
+    });
+  </script>
+</body>
+</html>

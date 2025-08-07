@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zoho Job Openings</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    const deadline = new Date("2025-07-31T15:07:59");
+    function updateCountdown() {
+      const now = new Date();
+      const diff = deadline - now;
+      if (diff <= 0) {
+        document.getElementById("countdown").textContent = "Application closed!";
+        clearInterval(timerInterval);
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      document.getElementById("countdown").textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+    const timerInterval = setInterval(updateCountdown, 1000);
+    window.onload = updateCountdown;
+  </script>
+</head>
+<body>
+  <div class="header">
+    <div class="logo"><img width="130px" height="100px" src="./logo.png"/></div>
+    <div class="right-group">
+      <div class="logout">Logout</div>
+      <div class="bar" onclick="openn()">&#9776;</div>
+    </div>
+  </div>
+
+  <div class="slide-menu">
+    <div class="slide-logo">
+      <img width="100px" height="80px" src="./logo.png"/>
+      <span onclick="cloose()">&times;</span>
+    </div>
+    <a>Home</a>
+    <a>Projects</a>
+    <a>Startups</a>
+    <a>Resumes</a>
+    <a>Hirings</a>
+    <a>TechResources</a>
+    <a>ContestTrack</a>
+  </div>
+  <div class="overlay" onclick="cloose()"></div>
+
+  <script>
+    function openn() {
+      document.getElementsByClassName("slide-menu")[0].style.left = "0px";
+      document.querySelector(".overlay").style.display = "block";
+      document.body.style.overflow = "hidden";
+    }
+    function cloose() {
+      document.getElementsByClassName("slide-menu")[0].style.left = "-250px";
+      document.querySelector(".overlay").style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  </script>
+
+  <div class="container">
+    <div class="top-section">
+      <div class="left">
+        <div class="header-card">
+          <div class="logo-box">
+            <img src="https://download.logo.wine/logo/Zoho_Corporation/Zoho_Corporation-Logo.wine.png" alt="Zoho Logo" />
+          </div>
+          <div class="job-info">
+            <h1>Zoho</h1>
+            <div class="meta-info">Zoho Corporation &nbsp; | &nbsp; Updated On: Jul 31, 2025</div>
+          </div>
+          <div class="day-box">
+            <i class="fa-regular fa-calendar"></i>
+            <div id="countdown">Loading...</div>
+          </div>
+        </div>
+
+        <div class="details-section">
+          <h2>About the Job Role:</h2>
+          <p>Zoho is looking for creative, committed, and curious minds to join our diverse team. We are offering full-time roles in product development, technical support, software engineering, and business solutions across multiple locations in India.</p>
+          <h3>Key Responsibilities:</h3>
+          <ul>
+            <li>Work on Zoho’s suite of online productivity tools</li>
+            <li>Develop scalable backend systems and responsive interfaces</li>
+            <li>Engage with global customers to deliver tech support and training</li>
+          </ul>
+          <h2>Skills and Qualifications:</h2>
+          <h3>Technical:</h3>
+          <ul>
+            <li>Knowledge of Java, C++, or Python</li>
+            <li>Good understanding of web development, databases, and REST APIs</li>
+          </ul>
+          <h3>Soft Skills:</h3>
+          <ul>
+            <li>Clear communication and a user-first mindset</li>
+            <li>Ability to work in a fast-paced team</li>
+          </ul>
+          <h2>Experience:</h2>
+          <ul>
+            <li>Freshers and professionals with up to 2 years of experience</li>
+            <li>Graduates in Computer Science, IT, or related fields</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <div class="card">
+          <p><strong>Impressions:</strong> 15,890</p>
+          <p><strong>Applied:</strong> 1,742</p>
+          <div class="button-container">
+            <a href="https://www.zoho.com/careers/" target="_self" class="Applynow">APPLY NOW</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Eligibility</h3>
+          <ul>
+            <li><p>B.E. / B.Tech / M.C.A / B.Sc. IT / M.Sc. CS</p></li>
+            <li><p>Graduation years: 2022–2025</p></li>
+            <li><p>60%+ in academics</p></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Available Roles</h3>
+          <ul>
+            <li>Software Developer <br/> Chennai <br/> Full-time</li>
+            <li>Product Designer <br/> Salem <br/> Full-time</li>
+            <li>Technical Support Engineer <br/> Coimbatore <br/> Full-time</li>
+            <li>Quality Analyst <br/> Tenkasi <br/> Full-time</li>
+            <li>Marketing Analyst <br/> Chennai <br/> Full-time</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   <footer class="footer-bottom">
+  <p>© 2025 <span class="brand-highlight">Tech360 Pvt Ltd</span>. All rights reserved.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,158 @@
+.roadmap-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background:linear-gradient(135deg,#e9c76a, #fdf5d9, #e9c76a);
+    padding: 70px 10px;
+}
+
+.roadmap {
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.roadmap p {
+    color: grey;
+    font-size: 20px;
+    font-weight: 700;
+    max-width: 1000px;
+    text-align:center;
+    margin: auto;
+}
+
+.parent-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 30px;               /* adds spacing between all rows & columns */
+    padding: 20px;           /* space around the entire grid */
+    box-sizing: border-box; /* ensures padding doesn't break layout */
+    /*max-width: 1200px;        optional: prevents layout from becoming too wide */
+    margin: 0 auto;          /* center the grid on page */
+}
+
+
+.grid-item {
+    max-width: 300px;
+    width: 100%;
+    min-height: 450px;
+    border: 2px solid rgb(254, 216, 120);
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+}
+
+.grid-item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+.grid-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    object-fit: contain;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+.grid-item h3 {
+    font-size: 22px;
+    margin: 20px 0 10px;
+    color: black;
+}
+
+.grid-item p {
+    font-size: 16px;
+    color: grey;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    max-width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    background: linear-gradient(to right, #edb640, #f7e7b3);
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: transform 0.3s linear, box-shadow 0.3s linear;
+    border: none;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #b87c03;
+    transform: translateX(-300px);
+    transition: transform 0.3s linear;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+button:hover::before {
+    transform: translateX(0);
+}
+
+button:hover {
+    transform: scale(1.09);
+    box-shadow: 0px 0px 10px 15px rgba(244, 226, 158, 0.3);
+}
+
+.resource-list li {
+    padding: 5px 10px;
+    transition: color 0.2s ease, font-weight 0.2s ease;
+    cursor: pointer;
+    margin-left:60px;
+    text-align:start;
+}
+
+.resource-list li:hover {
+    color: #f2c94c; /* gold/yellowish highlight */
+    font-weight: bold;
+}
+
+.resource-list a {
+  color: black;
+  text-decoration: none;
+}
+
+.resource-list a:hover {
+  color: #d4a017; /* Optional: golden hover color */
+  text-decoration: underline;
+}
+
+
+@media (max-width: 1200px) {
+  .parent-grid {
+    grid-template-columns: repeat(3, 1fr); /* 👈 3 items per row */
+  }
+}
+
+@media (max-width: 992px) {
+  .parent-grid {
+    grid-template-columns: repeat(2, 1fr); /* 👈 2 items per row */
+  }
+}
+
+@media (max-width: 576px) {
+  .parent-grid {
+    grid-template-columns: 1fr; /* 👈 1 item per row */
+  }
+}

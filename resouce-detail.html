@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resource Details - Data Structures</title>
+  <style>
+ * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #fffbe7;
+  padding: 20px;
+  color: #333;
+}
+
+
+.parent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  background: linear-gradient(135deg, #e9c76a, #fdf5d9, #e9c76a);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.title {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+}
+
+h1 {
+  color: #202020;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.title p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.dsa-img {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.dsa-img img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.dsa-img img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+#openModal {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #333300;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#openModal:hover {
+  background-color: #555500;
+}
+
+.blur {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: #fffbe7;
+  padding: 30px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  animation: slideIn 0.3s ease-out;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.modal-content h2 {
+  margin-top: 20px;
+  color: #333300;
+}
+
+.modal-content ul {
+  margin-left: 20px;
+  line-height: 1.6;
+}
+
+.modal-close {
+  text-align: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Medium screens (tablet) */
+@media screen and (max-width: 900px) {
+  .parent {
+    flex-direction: column-reverse;
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .title p {
+    font-size: 1rem;
+  }
+
+  .dsa-img img {
+    max-width: 90%;
+  }
+
+  #openModal {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Small screens (mobile) */
+@media screen and (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .modal-content {
+    padding: 20px;
+  }
+
+  .modal-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .modal-content ul {
+    font-size: 0.95rem;
+  }
+
+  .title p {
+    font-size: 0.95rem;
+  }
+
+  #openModal {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="parent">
+    <div class="title">
+      <h1>Data Structures and Algorithms</h1>
+      <p>
+        Data Structures Tutorial gives you both theoretical and practical aspects of using various Abstract Data Types (ADTs). These ADTs include linked lists, stacks, queues, trees, hashing, searching, and sorting algorithms. When it comes to algorithms you are always faced with challenges with respect to space and time complexities, which this course covers in-depth.
+      </p>
+      <p>
+        Based on the type and amount of data you are going to deal with, you will be in a position to choose the correct algorithm and implement it using the correct ADT. In short, you will see core computer science concepts getting applied.
+      </p>
+      <p>
+        From an implementation point of view, you will be extending your C programming course learning and making a deep dive into self-referential structures, dynamic memory allocation, and advanced pointer usage.
+      </p>
+    </div>
+
+    <div class="dsa-img">
+      <img src="https://media.licdn.com/dms/image/v2/D5622AQGDrea6L0NDKQ/feedshare-shrink_800/feedshare-shrink_800/0/1732257878480?e=2147483647&v=beta&t=OATvcOdSxlZF-E8fJQqIMxqKm9JM_9_KaXvQ48Ek27U" alt="DSA Image">
+      <button id="openModal">View Course Info</button>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="modalOverlay">
+    <div class="modal-content">
+      <div class="modal-close" id="closeModal">&times;</div>
+
+      <h2>COURSE OBJECTIVES:</h2>
+      <ul>
+        <li>Understand the fundamental concepts of data structures and algorithms</li>
+        <li>Develop problem-solving skills using efficient algorithmic techniques</li>
+        <li>Gain hands-on experience with implementing data structures like arrays, linked lists, stacks, queues, trees, graphs, and hash tables</li>
+        <li>Analyze time and space complexity to write optimized code</li>
+        <li>Apply algorithmic techniques such as recursion, divide and conquer, dynamic programming, and greedy methods</li>
+      </ul>
+
+      <h2>TARGET AUDIENCE:</h2>
+      <ul>
+        <li>Beginner programmers aiming to build a strong foundation in DSA</li>
+        <li>Engineering students preparing for technical interviews and coding competitions</li>
+        <li>Software developers looking to strengthen their algorithmic thinking</li>
+      </ul>
+
+      <h2>PREREQUISITE:</h2>
+      <ul>
+        <li>Basic proficiency in C programming or any other programming language</li>
+        <li>Familiarity with control structures, functions, and arrays</li>
+      </ul>
+
+      <h2>PLATFORM:</h2>
+      <ul>
+        <li>Operating System – Linux (Ubuntu) / Windows / Mac</li>
+        <li>Compiler – GCC (Preferred)</li>
+        <li>Debugger – GDB (Preferred)</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const openBtn = document.getElementById('openModal');
+    const parent = document.querySelector('.parent');
+    const modal = document.getElementById('modalOverlay');
+    const closeBtn = document.getElementById('closeModal');
+
+    openBtn.addEventListener('click', () => {
+      modal.style.display = 'flex';
+      parent.classList.add('blur');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+      parent.classList.remove('blur');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+        parent.classList.remove('blur');
+      }
+    });
+  </script>
+</body>
+</html>

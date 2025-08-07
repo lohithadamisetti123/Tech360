@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | College 360</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./iship1.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div class="logo"><img width="130px" height="100px" src="logo.png" alt="Logo"/></div>
+   <div class="menu">
+                <a href="home.html">Home</a>
+                <a href="projects.html" style="color: #d4a339;text-decoration: none;">Projects</a>
+                <a href="startup.html">Startups</a>
+                <a href="resume_html.html">Resumes</a>
+                <a href="internships.html">Hirings</a>
+                <a href="Tech360.html">TechResources</a>
+                <a href="ContestTrack.html">ContestTrack</a>
+            </div>
+
+             <div class="right-group">
+                   <a href="index.html" class="logout" style="text-decoration: none;">Logout</a>
+    <div class="bar" onclick="openn()">&#9776;</div>
+  </div>
+        </div>
+
+        <!-- Slide Bar -->
+        <div class="slide-menu">
+            <div class="slide-logo">
+                <img width="100px" height="80px" src="logo.png"/>
+                <span onclick="cloose()">&times;</span>
+            </div>
+                <a href="home.html" >Home</a>
+                <a href="projects.html" style="color: #d4a339;text-decoration: none;">Projects</a>
+                <a href="startup.html">Startups</a>
+                <a href="resume_html.html">Resumes</a>
+                <a href="internships.html">Hirings</a>
+                <a href="Tech360.html">TechResources</a>
+                <a href="ContestTrack.html">ContestTrack</a>
+        </div>
+  <div class="overlay" onclick="cloose()"></div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="over">
+      <h1>Projects: Where <br>B.Tech transforms into <br><span>a career.</span></h1>
+      <p>Explore innovations by students, for students.</p>
+    </div>
+  </section>
+
+  <!-- Cards Section -->
+  <section class="cards-section" id="cards">
+    <div class="cards">
+      <div class="card" onclick="window.location.href='space.html'" style="cursor: pointer;">
+        <div class="icon">🚀</div>
+        <h3>Project Space</h3>
+        <p>Collaborate, exchange ideas, earn points, and build solutions together.</p>
+      </div>
+      <div class="card" onclick="window.location.href='iship.html'" style="cursor: pointer;">
+        <div class="icon">📘</div>
+        <h3>Final Year Projects</h3>
+        <p>Explore innovations, cutting‑edge ideas and real engineering excellence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-bottom">
+    <p>© 2025 <span class="brand-highlight">Tech360 Pvt Ltd</span>. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function openn() {
+      document.querySelector(".slide-menu").style.left = "0px";
+      document.querySelector(".overlay").style.display = "block";
+      document.body.style.overflow = "hidden";
+    }
+
+    function cloose() {
+      document.querySelector(".slide-menu").style.left = "-250px";
+      document.querySelector(".overlay").style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  </script>
+</body>
+</html>
