@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C++ Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f7e8b7, #f1c27b);
+      margin: 0;
+      padding: 40px 20px;
+      color: #5e4b2c;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #b8860b;
+      font-size: 2.6rem;
+      font-weight: 600;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .project-container {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .project {
+      background-color: #fffaf0;
+      border-radius: 12px;
+      padding: 20px 25px;
+      box-shadow: 0 8px 20px rgba(184, 134, 11, 0.2);
+      transition: transform 0.3s ease;
+      opacity: 0;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+
+    .project:nth-child(odd) {
+      animation-name: slideInLeft;
+    }
+
+    .project:nth-child(even) {
+      animation-name: slideInRight;
+    }
+
+    @keyframes slideInLeft {
+      from {
+        transform: translateX(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        transform: translateX(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .project:hover {
+      transform: translateY(-6px);
+    }
+
+    .project h2 {
+      font-size: 1.2rem;
+      color: #b8860b;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      font-size: 0.95rem;
+      color: #4e3a24;
+      line-height: 1.6;
+    }
+
+    .resources {
+      margin-top: 12px;
+      font-size: 0.85rem;
+    }
+
+    .resources span {
+      display: inline-block;
+      background: #fceabb;
+      color: #8b6914;
+      padding: 5px 10px;
+      margin: 5px 5px 0 0;
+      border-radius: 5px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>C++ Projects</h1>
+
+  <div class="project-container">
+
+    <div class="project">
+      <h2>1. Student Record System</h2>
+      <p>Store and manage student details like name, roll number, marks, etc., using file handling.</p>
+      <div class="resources">
+        <strong>Concepts:</strong>
+        <span>Classes & Objects</span>
+        <span>File I/O</span>
+        <span>OOP</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <h2>2. Bank Management System</h2>
+      <p>Simulate banking operations like deposit, withdraw, and balance check for multiple accounts.</p>
+      <div class="resources">
+        <strong>Concepts:</strong>
+        <span>OOP</span>
+        <span>File Handling</span>
+        <span>Structures</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <h2>3. Notepad (CLI Version)</h2>
+      <p>A simple text file editor that allows reading, writing, and appending notes.</p>
+      <div class="resources">
+        <strong>Concepts:</strong>
+        <span>File Streams</span>
+        <span>Strings</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <h2>4. Billing System</h2>
+      <p>Manage products and print customer bills with item names, prices, and totals.</p>
+      <div class="resources">
+        <strong>Concepts:</strong>
+        <span>Arrays</span>
+        <span>Classes</span>
+        <span>Basic I/O</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <h2>5. Hangman Game</h2>
+      <p>Terminal-based guessing game with word masking and limited attempts.</p>
+      <div class="resources">
+        <strong>Concepts:</strong>
+        <span>Loops</span>
+        <span>Strings</span>
+        <span>Random</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <h2>6. Inventory Management</h2>
+      <p>Track stock levels of products, add/remove items, and generate reports.</p>
+      <div class="resources">
+        <strong>Concepts:</strong>
+        <span>Structures</span>
+        <span>Files</span>
+        <span>Classes</span>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

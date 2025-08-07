@@ -1,0 +1,222 @@
+   * {
+      margin: 0;
+      padding: 0;
+      /* box-sizing: border-box; */
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+  font-family: 'Inter', sans-serif;
+  /* background: #fff8e1 url('https://www.transparenttextures.com/patterns/gold-scale.png'); */
+  background-color: #fcf8ee;
+  background-repeat: repeat;
+  background-size: 400px 400px;
+  display: flex;
+  min-height: 100vh;
+  overflow-x: hidden;}
+    .sidenav {
+      width: 260px;
+      height: 100vh;
+      background: linear-gradient(to bottom right, #f7e7b3, #ffd64f6b);
+      padding: 20px;
+      box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      overflow-y: auto;
+      z-index: 10;
+    }
+    .sidenav-header {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 25px;
+      color: #4d3200;
+      user-select: none;
+    }
+    .sidenav a {
+      display: block;
+      color: #3d2600;
+      font-weight: 600;
+      padding: 12px;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s, color 0.3s;
+      cursor: pointer;
+    }
+    .sidenav a:hover,
+    .sidenav a.active {
+      background-color: rgba(255, 255, 255, 0.4);
+      color: #8b5e00;
+    }
+    .main-content {
+      margin-left: 280px;
+      padding: 40px 40px 80px;
+      flex-grow: 1;
+      width: calc(100% - 280px);
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.08);
+      font-weight: 600;
+      color: #4d3200;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .card img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  padding: 1dvb;
+  margin-top: 10px;
+}
+    .card-content {
+      padding: 16px 20px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+    .card-desc {
+      font-weight: 400;
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+.btn-view-more  {
+  padding: 8px 18px;
+  background: linear-gradient(to right, #d4a339, #f7e7b3);
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(41, 2, 2, 0.85);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.btn-view-more:hover  {
+  transform: scale(1.05);
+}
+    @media (max-width: 768px) {
+      .sidenav {
+        width: 200px;
+      }
+      .main-content {
+        margin-left: 220px;
+        padding: 20px;
+        width: calc(100% - 220px);
+      }
+    }
+    @media (max-width: 480px) {
+      .sidenav {
+        display: none;
+      }
+      .main-content {
+        margin: 0;
+        padding: 20px;
+        width: 100%;
+      }
+    }
+  .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.modal-overlay.active {
+  display: flex;
+}
+.modal {
+  padding: 30px 40px;
+  background-color:white;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  position: relative;
+  animation: slideIn 0.3s ease;
+}
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #6f4900;
+  cursor: pointer;
+}
+.modal-close:hover {
+  color: #4d3200;
+}
+@keyframes slideIn {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+/* Hide mobile dropdown on large screens */
+.mobile-sidenav {
+  cursor: pointer;
+  display: none;
+  padding: 20px;
+  background: linear-gradient(to right, #fff8dc, #ffe082);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  font-weight: bold;
+  font-size: 16px;
+  color: #4d3200;
+}
+
+.mobile-sidenav select {
+  cursor: pointer;
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 15px;
+  width: 100%;
+  border: 1px solid #d1a300;
+  background-color: #fffdf2;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .desktop-sidenav {
+    display: none;
+  }
+
+  .mobile-sidenav {
+    display: block;
+  }
+
+  body {
+    padding-top: 100px; /* To push content below mobile dropdown */
+    flex-direction: column;
+  }
+}
+

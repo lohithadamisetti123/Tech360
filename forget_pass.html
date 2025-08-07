@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="forget_pass.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <ul class="background-squares">
+        <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+    </ul>
+
+    <div class="container">
+        <div class="form-box-forgot">
+            <form id="reset-form">
+                <div id="find-account-step">
+                    <h1>Find Your Account</h1>
+                    <p class="info-text">Enter the email associated with your account.</p>
+                    <div class="input-box">
+                        <input type="email" placeholder="Email Address" id="recovery-email" required>
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <button type="button" class="btn" id="find-account-btn">Find Account</button>
+                </div>
+
+                <div id="reset-password-step" style="display: none;">
+                    <h1>Reset Your Password</h1>
+                    <p class="info-text" id="reset-info-text">Enter your new password below.</p>
+                    <div class="input-box">
+                        <input type="password" placeholder="New Password" id="new-password" required>
+                        <i class="fa-solid fa-eye" id="toggle-new-password"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder="Confirm New Password" id="confirm-password" required>
+                        <i class="fa-solid fa-eye" id="toggle-confirm-password"></i>
+                    </div>
+                    <button type="submit" class="btn" id="reset-password-btn">Reset Password</button>
+                </div>
+                
+                <div id="success-message" style="display: none; text-align: center;">
+                    <i class="fa-solid fa-circle-check" style="color: #28a745; font-size: 50px; margin-bottom: 20px;"></i>
+                    <h1>Success!</h1>
+                    <p class="info-text">Your password has been reset.<br>Redirecting to the sign-in page...</p>
+                </div>
+                
+                <div class="back-link" id="back-link">
+                    <a href="login_page.html">Back to Sign In</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const findAccountStep = document.getElementById('find-account-step');
+        const resetPasswordStep = document.getElementById('reset-password-step');
+        const successMessage = document.getElementById('success-message');
+        const findAccountBtn = document.getElementById('find-account-btn');
+        const resetForm = document.getElementById('reset-form');
+        const resetInfoText = document.getElementById('reset-info-text');
+        const backLink = document.getElementById('back-link');
+        let userAccountKey = null;
+
+        // --- Reusable function to toggle password visibility ---
+        function setupPasswordToggle(inputId, toggleId) {
+            const passwordInput = document.getElementById(inputId);
+            const toggleIcon = document.getElementById(toggleId);
+
+            toggleIcon.addEventListener('click', () => {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                toggleIcon.classList.toggle('fa-eye-slash');
+            });
+        }
+
+        // --- Setup password toggles for reset page ---
+        setupPasswordToggle('new-password', 'toggle-new-password');
+        setupPasswordToggle('confirm-password', 'toggle-confirm-password');
+
+        findAccountBtn.addEventListener('click', () => {
+            const emailToFind = document.getElementById('recovery-email').value;
+            if (!emailToFind) {
+                alert("Please enter an email address.");
+                return;
+            }
+            let accountFound = false;
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                try {
+                    const userData = JSON.parse(localStorage.getItem(key));
+                    if (userData && userData.email === emailToFind) {
+                        userAccountKey = key;
+                        accountFound = true;
+                        break;
+                    }
+                } catch (error) { continue; }
+            }
+            if (accountFound) {
+                findAccountStep.style.display = 'none';
+                resetPasswordStep.style.display = 'block';
+                resetInfoText.textContent = `Account found for user: ${userAccountKey}. Please enter a new password.`;
+            } else {
+                alert("No account found with that email address.");
+            }
+        });
+        
+        resetForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const newPassword = document.getElementById('new-password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            if (!newPassword || !confirmPassword) {
+                alert("Please fill out both password fields.");
+                return;
+            }
+            if (newPassword !== confirmPassword) {
+                alert("Passwords do not match. Please try again.");
+                return;
+            }
+            if (userAccountKey) {
+                const user = JSON.parse(localStorage.getItem(userAccountKey));
+                user.password = newPassword;
+                localStorage.setItem(userAccountKey, JSON.stringify(user));
+                resetPasswordStep.style.display = 'none';
+                backLink.style.display = 'none';
+                successMessage.style.display = 'block';
+                setTimeout(() => { window.location.href = 'login_page.html'; }, 3000);
+            } else {
+                alert("An error occurred. Could not find user account to update.");
+            }
+        });
+    </script>
+</body>
+</html>

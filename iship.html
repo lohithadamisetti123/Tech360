@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Final Year Projects | College 360</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="cards.css">
+</head>
+<body>
+
+  <!-- Sidebar Navigation -->
+  <nav class="sidenav" aria-label="Branch Navigation">
+    <div class="sidenav-header">Select Your Branch</div>
+    <a href="#" class="branch-link active" data-branch="ComputerScience">Computer Science</a>
+    <a href="#" class="branch-link" data-branch="InformationTechnology">Information Technology</a>
+    <a href="#" class="branch-link" data-branch="ElectronicsCommunication">Electronics & Communication</a>
+    <a href="#" class="branch-link" data-branch="ElectricalEngineering">Electrical Engineering</a>
+    <a href="#" class="branch-link" data-branch="MechanicalEngineering">Mechanical Engineering</a>
+    <a href="#" class="branch-link" data-branch="CivilEngineering">Civil Engineering</a>
+  </nav>
+  <div class="mobile-sidenav">
+  <label for="branchSelect">Select Your Branch</label>
+  <select id="branchSelect">
+    <option value="">-- Choose Branch --</option>
+    <option value="ComputerScience">Computer Science</option>
+    <option value="InformationTechnology">Information Technology</option>
+    <option value="ElectronicsCommunication">Electronics & Communication</option>
+    <option value="ElectricalEngineering">Electrical Engineering</option>
+    <option value="MechanicalEngineering">Mechanical Engineering</option>
+    <option value="CivilEngineering">Civil Engineering</option>
+  </select>
+</div>
+  
+  <!-- Main Content Area -->
+  <main class="main-content" role="main">
+
+
+    <!-- Branch Sections -->
+    <section id="ComputerScience" class="branch-section active" tabindex="-1" aria-label="Computer Science Projects">
+      <h2 style="text-align: center; margin-bottom: 30px;">Computer Science</h2>
+      <div class="projects">
+        <article class="card" tabindex="0">
+          <img src="https://plus.unsplash.com/premium_photo-1683121710572-7723bd2e235d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YXJ0aWZpY2lhbCUyMGludGVsbGlnZW5jZXxlbnwwfHwwfHx8MA%3D%3D" alt="AI-based Code Reviewer" />
+          <div class="card-content">
+            <h3 class="card-title">AI-based Code Reviewer</h3>
+            <p class="card-desc">An intelligent tool that uses AI to review and suggest improvements in code.</p>
+            <button class="btn-view-more" aria-haspopup="dialog" aria-controls="modal" aria-expanded="false">View More</button>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0">
+          <img src="https://business.rice.edu/sites/default/files/styles/16_9_1600x900/public/2022-06/Blockchain-RBW.jpg?h=67eabc4d&itok=FiorMuPP" alt="Blockchain Voting System" />
+          <div class="card-content">
+            <h3 class="card-title">Blockchain Voting System</h3>
+            <p class="card-desc">Secure, transparent voting using blockchain technology.</p>
+            <button class="btn-view-more" aria-haspopup="dialog" aria-controls="modal" aria-expanded="false">View More</button>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=400&q=80" alt="Virtual File System" />
+          <div class="card-content">
+            <h3 class="card-title">Virtual File System</h3>
+            <p class="card-desc">Design and implementation of a virtual file system for efficient data management.</p>
+            <button class="btn-view-more" aria-haspopup="dialog" aria-controls="modal" aria-expanded="false">View More</button>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Secure Chat App" />
+          <div class="card-content">
+            <h3 class="card-title">Secure Chat App</h3>
+            <p class="card-desc">End-to-end encrypted chat application ensuring privacy and security.</p>
+            <button class="btn-view-more" aria-haspopup="dialog" aria-controls="modal" aria-expanded="false">View More</button>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0">
+          <img src="https://www.facechk.com/wp-content/uploads/2020/10/face-recognition-attendance-system.jpg" alt="Face Recognition Attendance" />
+          <div class="card-content">
+            <h3 class="card-title">Face Recognition Attendance</h3>
+            <p class="card-desc">Automated attendance system using face recognition technology.</p>
+            <button class="btn-view-more" aria-haspopup="dialog" aria-controls="modal" aria-expanded="false">View More</button>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0">
+          <img src="https://www.augmentedmind.de/wp-content/uploads/2021/06/cloud-ide-feature.jpg" alt="Cloud-based IDE" />
+          <div class="card-content">
+            <h3 class="card-title">Cloud-based IDE</h3>
+            <p class="card-desc">Develop your projects on a powerful online integrated development environment.</p>
+            <button class="btn-view-more" aria-haspopup="dialog" aria-controls="modal" aria-expanded="false">View More</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="InformationTechnology" class="branch-section" tabindex="-1" aria-label="Information Technology Projects" hidden>
+      <h2 style="text-align: center; margin-bottom: 30px;">Information Technology</h2>
+      <div class="projects">
+        <article class="card" tabindex="0">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4POXO81kxUg3ZbMkww05YCeEgIaEizH3_wA&s" alt="Online Examination Portal" />
+          <div class="card-content">
+            <h3 class="card-title">Online Examination Portal</h3>
+            <p class="card-desc">A platform for conducting secure and efficient online exams.</p>
+            <button class="btn-view-more" aria-haspopup="dialog" aria-controls="modal" aria-expanded="false">View More</button>
+          </div>
+        </article>
+        <article class="card" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Smart Resume Builder" />
+          <div class="card-content">
+            <h3 class="card-title">Smart Resume Builder</h3>
+            <p class="card-desc">Create professional resumes with ease using smart templates.</p>
+            <button class="btn-view-more" aria-haspopup="dialog" aria-controls="modal" aria-expanded="false">View More</button>
+          </div>
+        </article>
+        <article class="card" tabindex="0">
+          <img src="https://iskylar.com/wp-content/uploads/2024/08/Online-Travel-Ticket-Booking-App-Development-1-e1617963875716.png" alt="Ticket Booking System" />
+          <div class="card-content">
+            <h3 class="card-title">Ticket Booking System</h3>
+            <p class="card-desc">Online ticket booking platform for events and transportation.</p>
+            <button class="btn-view-more" aria-haspopup="dialog" aria-controls="modal" aria-expanded="false">View More</button>
+          </div>
+        </article>
+        <article class="card" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=400&q=80" alt="Event Management Tool" />
+          <div class="card-content">
+            <h3 class="card-title">Event Management Tool</h3>
+            <p class="card-desc">Tool for organizing and managing events seamlessly.</p>
+            <button class="btn-view-more" aria-haspopup="dialog" aria-controls="modal" aria-expanded="false">View More</button>
+          </div>
+        </article>
+        <article class="card" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Data Masking Tool" />
+          <div class="card-content">
+            <h3 class="card-title">Data Masking Tool</h3>
+            <p class="card-desc">Protect sensitive information with automated data masking.</p>
+            <button class="btn-view-more" aria-haspopup="dialog" aria-controls="modal" aria-expanded="false">View More</button>
+          </div>
+        </article>
+        <article class="card" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Cloud Backup System" />
+          <div class="card-content">
+            <h3 class="card-title">Cloud Backup System</h3>
+            <p class="card-desc">Reliable cloud backup solution for data protection.</p>
+            <button class="btn-view-more" aria-haspopup="dialog" aria-controls="modal" aria-expanded="false">View More</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Other branches omitted here for brevity, but should follow same structure -->
+    
+    <section id="ElectronicsCommunication" class="branch-section" tabindex="-1" aria-label="Electronics & Communication Projects" hidden>
+      <h2 style="text-align: center; margin-bottom: 30px;">Electronics & Communication</h2>
+      <div class="projects">
+        <article class="card" tabindex="0">
+          <img src="https://t4.ftcdn.net/jpg/12/04/56/11/360_F_1204561132_NojKbJhA1ug8TqYXAAFgl93gqZs07UNb.jpg" alt="RFID-based Toll System" />
+          <div class="card-content">
+            <h3 class="card-title">RFID-based Toll System</h3>
+            <p class="card-desc">Automatic toll collection system using RFID technology.</p>
+            <button class="btn-view-more">View More</button>
+          </div>
+        </article>
+        <article class="card" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=400&q=80" alt="Smart Traffic Controller" />
+          <div class="card-content">
+            <h3 class="card-title">Smart Traffic Controller</h3>
+            <p class="card-desc">Optimizing traffic flow using intelligent control systems.</p>
+            <button class="btn-view-more">View More</button>
+          </div>
+        </article>
+        <!-- Add more cards as needed -->
+      </div>
+    </section>
+
+    <section id="ElectricalEngineering" class="branch-section" tabindex="-1" aria-label="Electrical Engineering Projects" hidden>
+      <h2 style="text-align: center; margin-bottom: 30px;">Electrical Engineering</h2>
+      <div class="projects">
+        <article class="card" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Solar Tracking System" />
+          <div class="card-content">
+            <h3 class="card-title">Solar Tracking System</h3>
+            <p class="card-desc">System to maximize solar panel efficiency by tracking sun movement.</p>
+            <button class="btn-view-more">View More</button>
+          </div>
+        </article>
+        <!-- Add more cards -->
+      </div>
+    </section>
+
+    <section id="MechanicalEngineering" class="branch-section" tabindex="-1" aria-label="Mechanical Engineering Projects" hidden>
+      <h2 style="text-align: center; margin-bottom: 30px;">Mechanical Engineering</h2>
+      <div class="projects">
+        <article class="card" tabindex="0">
+          <img src="https://media.istockphoto.com/id/1475054812/photo/robot-hand-making-contact-with-human-finger-on-dark-blue-background-business-communication.jpg?s=612x612&w=0&k=20&c=XnFBm3qvApmT-jxHXQOh5Gl9ws-6FbV-ZWiXF3i0a2Q=" alt="Hydraulic Arm" />
+          <div class="card-content">
+            <h3 class="card-title">Hydraulic Arm</h3>
+            <p class="card-desc">Design and build of a hydraulic robotic arm for precision tasks.</p>
+            <button class="btn-view-more">View More</button>
+          </div>
+        </article>
+        <!-- Add more cards -->
+      </div>
+    </section>
+
+    <section id="CivilEngineering" class="branch-section" tabindex="-1" aria-label="Civil Engineering Projects" hidden>
+      <h2 style="text-align: center; margin-bottom: 30px;">Civil Engineering</h2>
+      <div class="projects">
+        <article class="card" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Smart Drainage System" />
+          <div class="card-content">
+            <h3 class="card-title">Smart Drainage System</h3>
+            <p class="card-desc">Innovative drainage system to prevent urban flooding.</p>
+            <button class="btn-view-more">View More</button>
+          </div>
+        </article>
+        <!-- Add more cards -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal for View More -->
+  <div class="modal-overlay" role="dialog" tabindex="-1" id="modal">
+    <div class="modal">
+      <button class="modal-close">&times;</button>
+      <h3 id="modal-title">Project Title</h3>
+      <p id="modal-content">Project detailed description will appear here.</p>
+    </div>
+  </div>
+
+<script>
+       const branches = document.querySelectorAll('.branch-link');
+const sections = document.querySelectorAll('.branch-section');
+branches.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    branches.forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+    sections.forEach(sec => {
+      sec.classList.remove('active');
+      sec.setAttribute('hidden', '');
+    });
+    const target = document.getElementById(link.dataset.branch);
+    if (target) {
+      target.classList.add('active');
+      target.removeAttribute('hidden');
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+// Modal functionality
+const modalOverlay = document.createElement('div');
+modalOverlay.className = 'modal-overlay';
+document.body.appendChild(modalOverlay);
+modalOverlay.innerHTML = `
+  <div class="modal">
+  <button class="modal-close">&times;</button>
+  <h3 id="modal-title" style="font-size: 1.5rem; margin-bottom: 16px; font-weight: 700; color: #4d3200;"></h3>
+  <p id="modal-content" style="font-size: 1rem; line-height: 1.6; color: #6f4900; margin-top: 12px;"></p>
+</div>`;
+
+const modal = modalOverlay.querySelector('.modal');
+const modalTitle = modal.querySelector('#modal-title');
+const modalContent = modal.querySelector('#modal-content');
+const modalClose = modal.querySelector('.modal-close'); 
+  // Enriched project details
+ const projectDetails = {
+  "AI-based Code Reviewer": `
+    <strong>Problem Statement:</strong> Developers often struggle to identify code quality issues, best practices, or improvements during peer reviews.<br>
+    <strong>Workflow:</strong> 1. Developer pushes code. 2. Code is analyzed using ML model. 3. Suggestions are generated and shown.<br>
+    <strong>Technologies Used:</strong> Python, NLP (spaCy, BERT), Machine Learning, Flask, GitHub API<br>
+    <strong>GitHub:</strong> <a href='https://github.com/yourrepo/ai-code-reviewer' target='_blank'>https://github.com/yourrepo/ai-code-reviewer</a><br>
+    <strong>Description:</strong> This project leverages natural language processing and machine learning to provide intelligent code suggestions, improving developer productivity and code quality.
+  `,
+  "Blockchain Voting System": `
+    <strong>Problem Statement:</strong> Traditional voting systems are prone to tampering and lack transparency.<br>
+    <strong>Workflow:</strong> 1. Admin creates election. 2. Voter authenticates and votes. 3. Vote is stored on blockchain.<br>
+    <strong>Technologies Used:</strong> Solidity, Ethereum, ReactJS, Web3.js, IPFS<br>
+    <strong>GitHub:</strong> <a href='https://github.com/yourrepo/blockchain-voting' target='_blank'>https://github.com/yourrepo/blockchain-voting</a><br>
+    <strong>Description:</strong> Implements a secure voting system using blockchain to ensure transparency and prevent tampering with votes.
+  `,
+  "Virtual File System": `
+    <strong>Problem Statement:</strong> Users need simplified file systems for educational or experimental purposes.<br>
+    <strong>Workflow:</strong> 1. User interacts via CLI. 2. Metadata stored in DB. 3. Virtual operations simulated.<br>
+    <strong>Technologies Used:</strong> C/C++, FUSE, SQLite<br>
+    <strong>GitHub:</strong> <a href='https://github.com/yourrepo/virtual-fs' target='_blank'>https://github.com/yourrepo/virtual-fs</a><br>
+    <strong>Description:</strong> A user-space file system that simulates traditional file systems, allowing flexible storage management.
+  `,
+  "Secure Chat App": `
+    <strong>Problem Statement:</strong> Most messaging platforms compromise privacy and store unencrypted data.<br>
+    <strong>Workflow:</strong> 1. Login & establish encrypted socket. 2. Send encrypted messages. 3. Optional self-destruct.<br>
+    <strong>Technologies Used:</strong> React Native, Node.js, WebSocket, Firebase, AES-256<br>
+    <strong>GitHub:</strong> <a href='https://github.com/yourrepo/secure-chat' target='_blank'>https://github.com/yourrepo/secure-chat</a><br>
+    <strong>Description:</strong> A mobile and web app providing encrypted real-time messaging with features like self-destruct messages and file sharing.
+  `,
+  "Face Recognition Attendance": `
+    <strong>Problem Statement:</strong> Manual attendance is time-consuming and error-prone.<br>
+    <strong>Workflow:</strong> 1. Capture image. 2. Compare with DB. 3. Log attendance.<br>
+    <strong>Technologies Used:</strong> Python, OpenCV, FaceNet, Raspberry Pi<br>
+    <strong>GitHub:</strong> <a href='https://github.com/yourrepo/face-attendance' target='_blank'>https://github.com/yourrepo/face-attendance</a><br>
+    <strong>Description:</strong> Automates attendance tracking using camera-based face recognition, eliminating manual input and errors.
+  `,
+  "Cloud-based IDE": `
+    <strong>Problem Statement:</strong> Developers lack collaborative environments for remote code editing.<br>
+    <strong>Workflow:</strong> 1. Join session. 2. Code/edit in real-time. 3. Compile in Docker container.<br>
+    <strong>Technologies Used:</strong> Node.js, Docker, WebSocket, ReactJS, Ace Editor<br>
+    <strong>GitHub:</strong> <a href='https://github.com/yourrepo/cloud-ide' target='_blank'>https://github.com/yourrepo/cloud-ide</a><br>
+    <strong>Description:</strong> An online coding platform allowing collaborative development, debugging, and deployment.
+  `,
+  "Online Examination Portal": `
+    <strong>Problem Statement:</strong> Conventional exams are hard to scale and monitor online.<br>
+    <strong>Workflow:</strong> 1. Upload questions. 2. Take exam. 3. Auto-evaluate.<br>
+    <strong>Technologies Used:</strong> Django, PostgreSQL, JavaScript, JWT<br>
+    <strong>GitHub:</strong> <a href='https://github.com/yourrepo/online-exam' target='_blank'>https://github.com/yourrepo/online-exam</a><br>
+    <strong>Description:</strong> A secure, scalable online exam system with automatic grading and anti-cheating measures.
+  `,
+  "Smart Resume Builder": `
+    <strong>Problem Statement:</strong> Manual resume creation lacks customization and design insights.<br>
+    <strong>Workflow:</strong> 1. Input data. 2. Generate suggestions. 3. Download resume.<br>
+    <strong>Technologies Used:</strong> React, Node.js, OpenAI API, HTML to PDF<br>
+    <strong>GitHub:</strong> <a href='https://github.com/yourrepo/smart-resume' target='_blank'>https://github.com/yourrepo/smart-resume</a><br>
+    <strong>Description:</strong> Uses AI templates and tips to create personalized resumes that stand out.
+  `,
+  "Ticket Booking System": `
+    <strong>Problem Statement:</strong> Booking systems are often outdated and lack real-time updates.<br>
+    <strong>Workflow:</strong> 1. Search/show. 2. Choose seat. 3. Confirm & pay.<br>
+    <strong>Technologies Used:</strong> Java, Spring Boot, MySQL, JSP<br>
+    <strong>GitHub:</strong> <a href='https://github.com/yourrepo/ticket-booking' target='_blank'>https://github.com/yourrepo/ticket-booking</a><br>
+    <strong>Description:</strong> Online platform to book tickets with seat selection, payments, and notifications.
+  `,
+  "Event Management Tool": `
+    <strong>Problem Statement:</strong> Manual planning lacks centralized automation tools.<br>
+    <strong>Workflow:</strong> 1. Create event. 2. Register users. 3. Manage updates.<br>
+    <strong>Technologies Used:</strong> PHP, Laravel, MySQL, Bootstrap<br>
+    <strong>GitHub:</strong> <a href='https://github.com/yourrepo/event-tool' target='_blank'>https://github.com/yourrepo/event-tool</a><br>
+    <strong>Description:</strong> Helps organizers schedule, promote, and manage events efficiently.
+  `,
+  "Data Masking Tool": `
+    <strong>Problem Statement:</strong> Sensitive data is exposed in non-production environments.<br>
+    <strong>Workflow:</strong> 1. Upload dataset. 2. Identify PII. 3. Mask data.<br>
+    <strong>Technologies Used:</strong> Python, Pandas, Regex, Flask<br>
+    <strong>GitHub:</strong> <a href='https://github.com/yourrepo/data-masking' target='_blank'>https://github.com/yourrepo/data-masking</a><br>
+    <strong>Description:</strong> Protects sensitive data by masking it during testing and development.
+  `,
+  "Cloud Backup System": `
+    <strong>Problem Statement:</strong> Data loss occurs due to irregular backups.<br>
+    <strong>Workflow:</strong> 1. Schedule backups. 2. Encrypt & upload. 3. Recover anytime.<br>
+    <strong>Technologies Used:</strong> AWS S3, Node.js, MongoDB, Cron Jobs<br>
+    <strong>GitHub:</strong> <a href='https://github.com/yourrepo/cloud-backup' target='_blank'>https://github.com/yourrepo/cloud-backup</a><br>
+    <strong>Description:</strong> Automated backup solution with encryption and recovery options.
+  `,
+  "RFID-based Toll System": `
+    <strong>Problem Statement:</strong> Manual tolls cause long queues and delays.<br>
+    <strong>Workflow:</strong> 1. Detect RFID. 2. Auto-deduct fee. 3. Open gate.<br>
+    <strong>Technologies Used:</strong> RFID, Arduino, Firebase<br>
+    <strong>GitHub:</strong> <a href='https://github.com/yourrepo/rfid-toll' target='_blank'>https://github.com/yourrepo/rfid-toll</a><br>
+    <strong>Description:</strong> Automates toll collection reducing congestion and manual work.
+  `,
+  "Smart Traffic Controller": `
+    <strong>Problem Statement:</strong> Fixed signal timings are inefficient in dynamic traffic conditions.<br>
+    <strong>Workflow:</strong> 1. Detect vehicle density. 2. Calculate time. 3. Control signals.<br>
+    <strong>Technologies Used:</strong> Python, OpenCV, TensorFlow, Arduino<br>
+    <strong>GitHub:</strong> <a href='https://github.com/yourrepo/smart-traffic' target='_blank'>https://github.com/yourrepo/smart-traffic</a><br>
+    <strong>Description:</strong> Uses sensors and AI to dynamically control traffic signals.
+  `,
+  "Solar Tracking System": `
+    <strong>Problem Statement:</strong> Static solar panels are inefficient.<br>
+    <strong>Workflow:</strong> 1. LDR senses light. 2. Rotate panel. 3. Maximize efficiency.<br>
+    <strong>Technologies Used:</strong> Arduino, Servo Motor, LDR Sensor<br>
+    <strong>GitHub:</strong> <a href='https://github.com/yourrepo/solar-tracker' target='_blank'>https://github.com/yourrepo/solar-tracker</a><br>
+    <strong>Description:</strong> Tracks sun movement to optimize solar panel output.
+  `,
+  "Hydraulic Arm": `
+    <strong>Problem Statement:</strong> Factories need affordable automation for repetitive tasks.<br>
+    <strong>Workflow:</strong> 1. User controls via joystick. 2. Pistons move. 3. Arm executes actions.<br>
+    <strong>Technologies Used:</strong> Hydraulics, Arduino, Joystick control<br>
+    <strong>GitHub:</strong> <a href='https://github.com/yourrepo/hydraulic-arm' target='_blank'>https://github.com/yourrepo/hydraulic-arm</a><br>
+    <strong>Description:</strong> A robotic arm operated via hydraulic mechanisms for precise control.
+  `,
+  "Smart Drainage System": `
+    <strong>Problem Statement:</strong> Flooding in cities due to poor drainage visibility.<br>
+    <strong>Workflow:</strong> 1. Measure drain water level. 2. Notify city systems. 3. Trigger alerts.<br>
+    <strong>Technologies Used:</strong> IoT, NodeMCU, Ultrasonic Sensor, Blynk<br>
+    <strong>GitHub:</strong> <a href='https://github.com/yourrepo/drainage-iot' target='_blank'>https://github.com/yourrepo/drainage-iot</a><br>
+    <strong>Description:</strong> Reduces urban flooding via intelligent water drainage management.
+  `
+};
+document.body.addEventListener('click', e => {
+  if (e.target.classList.contains('btn-view-more')) {
+    const card = e.target.closest('.card');
+    const title = card.querySelector('.card-title').textContent;
+    modalTitle.textContent = title;
+    modalContent.innerHTML = projectDetails[title] || 'Details are coming soon.';
+    modalOverlay.classList.add('active');
+  }
+});
+
+modalClose.addEventListener('click', () => {
+  modalOverlay.classList.remove('active');
+});
+
+modalOverlay.addEventListener('click', e => {
+  if (e.target === modalOverlay) modalOverlay.classList.remove('active');
+});
+document.getElementById("branchSelect").addEventListener("change", function () {
+  const selectedBranch = this.value;
+  if (!selectedBranch) return;
+
+  // Deactivate all branch links
+  branches.forEach(link => link.classList.remove('active'));
+
+  // Activate the matching branch link
+  const activeLink = [...branches].find(link => link.dataset.branch === selectedBranch);
+  if (activeLink) activeLink.classList.add('active');
+
+  // Hide all sections
+  sections.forEach(sec => {
+    sec.classList.remove('active');
+    sec.setAttribute('hidden', '');
+  });
+
+  // Show selected branch section
+  const targetSection = document.getElementById(selectedBranch);
+  if (targetSection) {
+    targetSection.classList.add('active');
+    targetSection.removeAttribute('hidden');
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+  }
+});
+document.getElementById("branchSelect").addEventListener("change", function () {
+  const selectedBranch = this.value;
+  if (!selectedBranch) return;
+
+  const sections = document.querySelectorAll('.branch-section');
+
+  // Hide all sections
+  sections.forEach(sec => {
+    sec.classList.remove('active');
+    sec.setAttribute('hidden', '');
+  });
+
+  // Find the section with matching ID
+  const targetSection = document.getElementById(selectedBranch);
+  if (targetSection) {
+    targetSection.classList.add('active');
+    targetSection.removeAttribute('hidden');
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+  }
+});
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DBMS Projects</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500;700&display=swap');
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to right, #fff8e1, #ffe0b2);
+      margin: 0;
+      padding: 40px 20px;
+      color: #3e2723;
+    }
+
+    h1 {
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #bf8f00;
+      font-size: 2.2rem;
+      animation: slideLeft 0.8s ease-out;
+    }
+
+    .project-container {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .project {
+      background-color: #fffef8;
+      border-left: 6px solid #e6ac00;
+      border-radius: 12px;
+      padding: 20px 25px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s;
+      animation: slideRight 1s ease forwards;
+    }
+
+    .project:hover {
+      transform: translateY(-6px);
+    }
+
+    .project h2 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #bf7100;
+    }
+
+    .project p {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #4e342e;
+    }
+
+    .resources {
+      margin-top: 10px;
+      font-size: 0.85rem;
+    }
+
+    .resources span {
+      display: inline-block;
+      background: linear-gradient(to right, #ffd54f, #ffb300);
+      color: #4e342e;
+      padding: 5px 9px;
+      margin: 5px 5px 0 0;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+
+    @keyframes slideLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-60px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideRight {
+      from {
+        opacity: 0;
+        transform: translateX(60px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Database Management System Projects</h1>
+
+  <div class="project-container">
+
+    <div class="project">
+      <h2>1. Student Management System</h2>
+      <p>A system to manage student data including enrollment, grades, and personal details.</p>
+      <div class="resources">
+        <strong>Technologies:</strong>
+        <span>MySQL</span>
+        <span>SQL</span>
+        <span>ER Diagram</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <h2>2. Library Management System</h2>
+      <p>Track books, borrowers, issue/return dates, and overdue penalties.</p>
+      <div class="resources">
+        <strong>Technologies:</strong>
+        <span>MySQL</span>
+        <span>Normalization</span>
+        <span>Stored Procedures</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <h2>3. Hospital Database System</h2>
+      <p>Manage patients, appointments, doctors, and treatment records.</p>
+      <div class="resources">
+        <strong>Technologies:</strong>
+        <span>SQL</span>
+        <span>Joins</span>
+        <span>Triggers</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <h2>4. Online Shopping Database</h2>
+      <p>Track users, orders, inventory, and transactions in an e-commerce platform.</p>
+      <div class="resources">
+        <strong>Technologies:</strong>
+        <span>MySQL</span>
+        <span>ER Model</span>
+        <span>SQL Queries</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <h2>5. Airline Reservation System</h2>
+      <p>Handle flight bookings, passenger records, and ticketing data.</p>
+      <div class="resources">
+        <strong>Technologies:</strong>
+        <span>SQL</span>
+        <span>Constraints</span>
+        <span>Transaction Management</span>
+      </div>
+    </div>
+
+    <div class="project">
+      <h2>6. Banking System Database</h2>
+      <p>Design a system for customer accounts, transactions, and loan management.</p>
+      <div class="resources">
+        <strong>Technologies:</strong>
+        <span>MySQL</span>
+        <span>Views</span>
+        <span>Triggers</span>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

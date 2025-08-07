@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Google STEP Internship</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    const deadline = new Date("2025-08-23T15:07:59");
+    function updateCountdown() {
+      const now = new Date();
+      const diff = deadline - now;
+      if (diff <= 0) {
+        document.getElementById("countdown").textContent = "Application closed!";
+        clearInterval(timerInterval);
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      document.getElementById("countdown").textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+    const timerInterval = setInterval(updateCountdown, 1000);
+    window.onload = updateCountdown;
+  </script>
+</head>
+<body>
+    <div class="header">
+            <div class="logo"><img width="130px" height="100px" src="./logo.png"/></div>
+            
+            <!-- <div class="menu">
+                <a>Home</a>
+                <a>Projects</a>
+                <a>Startups</a>
+                <a>Resumes</a>
+                <a>Hirings</a>
+                <a>TechResources</a>
+                <a>ContestTrack</a>
+            </div> -->
+
+             <div class="right-group">
+                   <div class="logout">Logout</div>
+    <div class="bar" onclick="openn()">&#9776;</div>
+  </div>
+        </div>
+
+        <!-- Slide Bar -->
+        <div class="slide-menu">
+            <div class="slide-logo">
+                <img width="100px" height="80px" src="./logo.png"/>
+                <span onclick="cloose()">&times;</span>
+            </div>
+                <a>Home</a>
+                <a>Projects</a>
+                <a>Startups</a>
+                <a>Resumes</a>
+                <a>Hirings</a>
+                <a>TechResources</a>
+                <a>ContestTrack</a>
+        </div>
+     <div class="overlay" onclick="cloose()"></div>
+
+        <!-- slide bar script -->
+    <script>
+      function openn() {
+            document.getElementsByClassName("slide-menu")[0].style.left = "0px";
+            document.querySelector(".overlay").style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+
+        function cloose() {
+            document.getElementsByClassName("slide-menu")[0].style.left = "-250px";
+            document.querySelector(".overlay").style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    </script>
+  <div class="container">
+    <div class="top-section">
+      <div class="left">
+        <div class="header-card">
+          <div class="logo-box">
+            <img src="https://imagepng.org/wp-content/uploads/2019/08/google-icon-1.png" alt="Google Logo" />
+          </div>
+          <div class="job-info">
+            <h1>Google STEP Internship</h1>
+            <div class="meta-info">Google &nbsp; | &nbsp; Updated On: Oct 23, 2025</div>
+          </div>
+          <div class="day-box">
+            <i class="fa-regular fa-calendar"></i>
+            <div id="countdown">Loading...</div>
+          </div>
+        </div>
+
+        <div class="details-section">
+          <h2>About the Internship:</h2>
+          <p>Join the Google STEP (Student Training in Engineering Program)—a dynamic internship designed for first and second-year undergraduates passionate about tech. This program offers real-world project experience, technical training, and personalized mentorship.</p>
+          <h3>Key Responsibilities:</h3>
+          <ul>
+            <li>Collaborate on real software engineering projects</li>
+            <li>Participate in code reviews and design discussions</li>
+            <li>Work closely with mentors and teammates</li>
+          </ul>
+          <h2>Skills and Qualifications:</h2>
+          <h3>Technical:</h3>
+          <ul>
+            <li>Basic knowledge of data structures and algorithms</li>
+            <li>Familiarity with Java, C++, or Python</li>
+          </ul>
+          <h3>Soft Skills:</h3>
+          <ul>
+            <li>Good communication and teamwork</li>
+            <li>Curiosity and willingness to learn</li>
+          </ul>
+          <h2>Experience:</h2>
+          <ul>
+            <li>Open to 1st and 2nd-year undergraduates in Computer Science or related fields</li>
+            <li>Encourages applicants from underrepresented backgrounds in tech</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <div class="card">
+          <p><strong>Impressions:</strong> 23,979</p>
+          <p><strong>Applied:</strong> 1,394</p>
+          <div class="button-container">
+            <a href="https://www.google.com/about/careers/applications/jobs/results/121209170417328838‑software‑student‑training‑in‑engineering‑program‑step‑intern‑2025‑english" target="_self" class="Applynow">APPLY NOW</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Eligibility</h3>
+          <ul>
+          <li><p>Engineering Students</p></li>
+          <li>Postgraduate</p></li>
+          <li><p>Undergraduate</p></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Available Roles</h3>
+          <ul>
+            <li>Frontend Developer Intern <br/> Bangalore<br/> 10 Weeks</li>
+            <li>Backend Developer Intern <br/> Hyderabad<br/> 12 Weeks</li>
+            <li>UX Design Intern <br/>Remote<br/> 8 Weeks</li>
+            <li>Data Science Intern <br/> Mumbai<br/>10 Weeks</li>
+           <!-- <li>Mobile App Developer Intern – Chennai, 8 Weeks</li> -->
+             <li>Cloud DevOps Intern <br/> Pune<br/> 12 Weeks</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   <footer class="footer-bottom">
+  <p>© 2025 <span class="brand-highlight">Tech360 Pvt Ltd</span>. All rights reserved.</p>
+</footer>
+</body>
+</html>

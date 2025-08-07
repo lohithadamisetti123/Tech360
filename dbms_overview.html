@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>View More</title>
+  <style>
+    body {
+      background-color: #fffaf3;
+      margin: 0;
+      padding: 40px 20px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .resource-section {
+      background: #fff9ec;
+      width: 280px;
+      padding: 24px;
+      border-radius: 20px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .resource-section:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .icon-circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #fffef8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px auto;
+    }
+
+    .icon-circle img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .resource-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 10px 0;
+      color: #5b3a00;
+    }
+
+    .resource-desc {
+      font-size: 15px;
+      color: #333;
+      margin-bottom: 20px;
+      padding: 0 10px;
+    }
+
+    .view-btn {
+      background: linear-gradient(135deg, #d9a200, #f6c860);
+      color: white;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s;
+    }
+
+    .view-btn:hover {
+      background: linear-gradient(135deg, #b38600, #e2b548);
+      transform: scale(1.05);
+    }
+
+    .view-btn a {
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="resource-section">
+      <div class="icon-circle">
+        <img src="https://www.emertxe.com/wp-content/uploads/2023/05/course_material_all-2.png" alt="Course Materials">
+      </div>
+      <div class="resource-title">Course Materials</div>
+      <div class="resource-desc">
+        Build sound foundations by understanding our in-depth course materials. Tons of reference materials to download and use.
+      </div>
+      <button class="view-btn"><a href="dbms.html">View All Resources</a></button>
+    </div>
+
+    <div class="resource-section">
+      <div class="icon-circle">
+        <img src="https://www.emertxe.com/wp-content/uploads/2023/05/course_material_all.png" alt="Sample Code">
+      </div>
+      <div class="resource-title">Sample code</div>
+      <div class="resource-desc">
+        Make your hands dirty by getting hands-on with our sample code. With designed use cases, get maximum coverage of the subject.
+      </div>
+      <button class="view-btn"><a href="coming_soon.html">View All Resources</a></button>
+    </div>
+
+    <div class="resource-section">
+      <div class="icon-circle">
+        <img src="https://www.emertxe.com/wp-content/uploads/2023/05/course_material_all.png" alt="Assignments">
+      </div>
+      <div class="resource-title">Assignments</div>
+      <div class="resource-desc">
+        Apply your knowledge by building real working programs. These assignments will stretch your thinking horizon for sure.
+      </div>
+      <button class="view-btn"><a href="coming_soon.html">View All Resources</a></button>
+    </div>
+
+    <div class="resource-section">
+      <div class="icon-circle">
+        <img src="https://www.emertxe.com/wp-content/uploads/2023/05/course_material_all-3.png" alt="Industry Projects">
+      </div>
+      <div class="resource-title">Industry projects</div>
+      <div class="resource-desc">
+        There is nothing cooler than seeing a working project. Learn and work on these industry projects by taking SDLC approach.
+      </div>
+      <button class="view-btn"><a href="dbms_projects.html">View All Resources</a></button>
+    </div>
+
+    <div class="resource-section">
+      <div class="icon-circle">
+        <img src="https://www.emertxe.com/wp-content/uploads/2023/05/course_material_all-4.png" alt="Interview Preparation">
+      </div>
+      <div class="resource-title">Interview preparation</div>
+      <div class="resource-desc">
+        Got an interview or written test tomorrow? Nothing can substitute the last-minute preparation. Clear your interviews with ease.
+      </div>
+      <button class="view-btn"><a href="https://www.interviewbit.com/dbms-interview-questions/">View All Resources</a></button>
+    </div>
+  </div>
+
+</body>
+</html>

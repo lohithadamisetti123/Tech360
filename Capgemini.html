@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Capgemini Job Openings</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    const deadline = new Date("2025-03-26T15:07:59");
+    function updateCountdown() {
+      const now = new Date();
+      const diff = deadline - now;
+      if (diff <= 0) {
+        document.getElementById("countdown").textContent = "Application closed!";
+        clearInterval(timerInterval);
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      document.getElementById("countdown").textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+    const timerInterval = setInterval(updateCountdown, 1000);
+    window.onload = updateCountdown;
+  </script>
+</head>
+<body>
+  <div class="header">
+    <div class="logo"><img width="130px" height="100px" src="./logo.png"/></div>
+    <div class="right-group">
+      <div class="logout">Logout</div>
+      <div class="bar" onclick="openn()">&#9776;</div>
+    </div>
+  </div>
+
+  <div class="slide-menu">
+    <div class="slide-logo">
+      <img width="100px" height="80px" src="./logo.png"/>
+      <span onclick="cloose()">&times;</span>
+    </div>
+    <a>Home</a>
+    <a>Projects</a>
+    <a>Startups</a>
+    <a>Resumes</a>
+    <a>Hirings</a>
+    <a>TechResources</a>
+    <a>ContestTrack</a>
+  </div>
+  <div class="overlay" onclick="cloose()"></div>
+
+  <script>
+    function openn() {
+      document.getElementsByClassName("slide-menu")[0].style.left = "0px";
+      document.querySelector(".overlay").style.display = "block";
+      document.body.style.overflow = "hidden";
+    }
+    function cloose() {
+      document.getElementsByClassName("slide-menu")[0].style.left = "-250px";
+      document.querySelector(".overlay").style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  </script>
+
+  <div class="container">
+    <div class="top-section">
+      <div class="left">
+        <div class="header-card">
+          <div class="logo-box">
+            <img src="https://1000logos.net/wp-content/uploads/2021/08/Capgemini-Logo.png" alt="Capgemini Logo" />
+          </div>
+          <div class="job-info">
+            <h1>Capgemini</h1>
+            <div class="meta-info">Capgemini &nbsp; | &nbsp; Updated On: Mar 26, 2025</div>
+          </div>
+          <div class="day-box">
+            <i class="fa-regular fa-calendar"></i>
+            <div id="countdown">Loading...</div>
+          </div>
+        </div>
+
+        <div class="details-section">
+          <h2>About the Job Role:</h2>
+          <p>Capgemini is hiring fresh graduates and experienced professionals to work on business transformation, software engineering, AI, and cloud computing. As part of our global technology consulting team, you will gain exposure to cutting-edge projects and international clients.</p>
+          <h3>Key Responsibilities:</h3>
+          <ul>
+            <li>Collaborate on end-to-end digital transformation initiatives</li>
+            <li>Develop, test, and deploy scalable software solutions</li>
+            <li>Work across domains including cloud, data, and cybersecurity</li>
+          </ul>
+          <h2>Skills and Qualifications:</h2>
+          <h3>Technical:</h3>
+          <ul>
+            <li>Understanding of Java, Python, SQL, or cloud platforms (GCP, Azure)</li>
+            <li>Hands-on experience in automation, APIs, or data analytics is a plus</li>
+          </ul>
+          <h3>Soft Skills:</h3>
+          <ul>
+            <li>Strong communication and presentation skills</li>
+            <li>Good analytical thinking and collaborative mindset</li>
+          </ul>
+          <h2>Experience:</h2>
+          <ul>
+            <li>0–3 years of work experience</li>
+            <li>Graduates in Engineering, Computer Applications, or related streams</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <div class="card">
+          <p><strong>Impressions:</strong> 22,108</p>
+          <p><strong>Applied:</strong> 3,015</p>
+          <div class="button-container">
+            <a href="https://www.capgemini.com/in-en/careers/" target="_self" class="Applynow">APPLY NOW</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Eligibility</h3>
+          <ul>
+            <li><p>BE / B.Tech / MCA / M.Tech graduates</p></li>
+            <li><p>2023–2025 pass-outs eligible</p></li>
+            <li><p>Minimum 60% academic record </p></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Available Roles</h3>
+          <ul>
+            <li>Full Stack Developer <br/> Bangalore <br/> Full-time</li>
+            <li>AI/ML Engineer <br/> Hyderabad <br/> Full-time</li>
+            <li>Cloud DevOps Associate <br/> Pune <br/> Full-time</li>
+            <li>Business Analyst <br/> Chennai <br/> Full-time</li>
+            <li>Quality Assurance Engineer <br/> Kolkata <br/> Full-time</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   <footer class="footer-bottom">
+  <p>© 2025 <span class="brand-highlight">Tech360 Pvt Ltd</span>. All rights reserved.</p>
+</footer>
+</body>
+</html>

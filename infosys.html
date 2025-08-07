@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Infosys InStep Global Internship</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    const deadline = new Date("2025-03-30T15:07:59");
+    function updateCountdown() {
+      const now = new Date();
+      const diff = deadline - now;
+      if (diff <= 0) {
+        document.getElementById("countdown").textContent = "Application closed!";
+        clearInterval(timerInterval);
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      document.getElementById("countdown").textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+    const timerInterval = setInterval(updateCountdown, 1000);
+    window.onload = updateCountdown;
+  </script>
+</head>
+<body>
+  <div class="header">
+    <div class="logo"><img width="130px" height="100px" src="./logo.png"/></div>
+    <div class="right-group">
+      <div class="logout">Logout</div>
+      <div class="bar" onclick="openn()">&#9776;</div>
+    </div>
+  </div>
+
+  <!-- Slide Bar -->
+  <div class="slide-menu">
+    <div class="slide-logo">
+      <img width="100px" height="80px" src="./logo.png"/>
+      <span onclick="cloose()">&times;</span>
+    </div>
+    <a>Home</a>
+    <a>Projects</a>
+    <a>Startups</a>
+    <a>Resumes</a>
+    <a>Hirings</a>
+    <a>TechResources</a>
+    <a>ContestTrack</a>
+  </div>
+  <div class="overlay" onclick="cloose()"></div>
+
+  <script>
+    function openn() {
+      document.getElementsByClassName("slide-menu")[0].style.left = "0px";
+      document.querySelector(".overlay").style.display = "block";
+      document.body.style.overflow = "hidden";
+    }
+    function cloose() {
+      document.getElementsByClassName("slide-menu")[0].style.left = "-250px";
+      document.querySelector(".overlay").style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  </script>
+
+  <div class="container">
+    <div class="top-section">
+      <div class="left">
+        <div class="header-card">
+          <div class="logo-box">
+            <img src="https://static.vecteezy.com/system/resources/previews/024/806/527/large_2x/infosys-logo-transparent-free-png.png" alt="Infosys Logo" />
+          </div>
+          <div class="job-info">
+            <h1>Infosys Global Internship</h1>
+            <div class="meta-info">Infosys India&nbsp;|&nbsp;Updated On: Mar 30, 2025</div>
+          </div>
+          <div class="day-box">
+            <i class="fa-regular fa-calendar"></i>
+            <div id="countdown">Loading...</div>
+          </div>
+        </div>
+
+        <div class="details-section">
+          <h2>About the Internship:</h2>
+          <p>Join the Infosys InStep Global Internship—a unique opportunity offering international students hands-on experience on real-time projects and engagement with global teams. Interns contribute to live business scenarios with mentorship from senior leaders.</p>
+
+          <h3>Key Responsibilities:</h3>
+          <ul>
+            <li>Work on strategic projects with global teams</li>
+            <li>Engage in research, innovation, and business consulting</li>
+            <li>Attend leadership talks, cultural events, and networking sessions</li>
+          </ul>
+
+          <h2>Skills and Qualifications:</h2>
+          <h3>Technical:</h3>
+          <ul>
+            <li>Basic programming or data analytics understanding</li>
+            <li>Familiarity with emerging technologies like AI, ML, and Blockchain</li>
+          </ul>
+
+          <h3>Soft Skills:</h3>
+          <ul>
+            <li>Collaborative mindset and curiosity</li>
+            <li>Strong verbal and written communication</li>
+          </ul>
+
+          <h2>Experience:</h2>
+          <ul>
+            <li>Open to undergraduate, graduate, and doctoral students worldwide</li>
+            <li>Applicants must be enrolled in a recognized university</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <div class="card">
+          <p><strong>Impressions:</strong> 48,521</p>
+          <p><strong>Applied:</strong> 2,140</p>
+          <div class="button-container">
+            <a href="https://www.infosys.com/instep" target="_self" class="Applynow">APPLY NOW</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Eligibility</h3>
+          <ul>
+            <li><p>Students enrolled in undergraduate/graduate programs</p></li>
+            <li><p>Background in Technology, Business or Liberal Arts</p></li>
+            <li><p>Open to international students</p></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Available Roles</h3>
+          <ul>
+            <li>Software Development Intern <br/> Bangalore <br/>8 Weeks</li>
+            <li>Business Analyst Intern <br/> Pune <br/> 10 Weeks</li>
+            <li>Data Analytics Intern <br/> Hyderabad <br/> 12 Weeks</li>
+            <li>AI/ML Research Intern <br/> Remote <br/> 10 Weeks</li>
+            <li>Consulting Strategy Intern <br/></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   <footer class="footer-bottom">
+  <p>© 2025 <span class="brand-highlight">Tech360 Pvt Ltd</span>. All rights reserved.</p>
+</footer>
+</body>
+</html>

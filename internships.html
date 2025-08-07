@@ -1,0 +1,770 @@
+
+<html>
+    <head>
+        <title>
+            Internships/Jobs
+        </title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+          <meta charset="UTF-8"/>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+        body{
+            width: 100%;
+            height: 100svh;
+            padding: 0;
+            margin: 0;
+           background: #fcf8ee;
+            /* box-sizing: border-box; */
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        .header {
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  z-index: 99;
+}
+.menu {
+    display: flex;
+    gap: 32px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight:bold;
+      color: rgba(41, 2, 2,0.8);
+}
+
+.menu a {
+    padding: 4px 6px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+.menu a, .menu a:link {
+    color: rgba(41, 2, 2, 0.8);
+    text-decoration: none; 
+    padding: 4px 6px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+.menu a:hover {
+    color: #d89d1d;
+}
+.right-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 30px;
+}
+
+.logout {
+    max-width: 200px;
+    height: 22px;
+    border-radius: 30px;
+    background: linear-gradient(to right, #d4a339, #f7e7b3);
+    font-size: 18px;
+    padding: 8px 26px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    font-weight: bold;
+    color: rgba(41, 2, 2,0.85);
+    transition: 0.3s linear;
+    box-shadow: 0px 6px 10px rgba(201, 153, 49, 0.3);
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.logout::before {
+    z-index: -1;
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #b87c03;
+    transform: translateX(-300px);
+    transition: transform .5s linear;
+    opacity: 0.3;
+}
+.logout, .logout:link, .logout:visited {
+    text-decoration: none;
+}
+.logout:hover::before {
+    transform: translateX(0px);
+}
+
+.logout:hover {
+    transform: scale(1.09);
+    box-shadow: 0px 0px 10px 5px rgba(244, 226, 158, 0.8);
+}
+
+.slide-menu{
+    top:0px;
+    position: fixed;
+    z-index: 999;
+    width: 230px;
+    height:100svh;
+    background-color: white;
+    border: 1px solid #f4daa4;
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+    cursor: pointer;
+    left: -250px;
+    transition: left 0.5s ease-out;
+    padding:10px;
+}
+.slide-menu a{
+    color: rgb(124, 118, 118);
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    padding: 18px 0px;
+    border-bottom: 1px solid #f4c870;  
+    width: 100%;
+}
+.slide-menu a, .slide-menu a:link, .slide-menu a:visited {
+    color: rgba(41, 2, 2, 0.8);
+    text-decoration: none; 
+}
+.slide-menu a:hover{
+    color: #d79f26;
+}
+.slide-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f4c870;
+    width: 100%;
+    padding: 10px 0;
+}
+.slide-logo img {
+    margin-top: -20px;
+}
+.slide-logo span {
+    font-size: 40px;
+    color: rgb(41, 2, 2);
+    padding: 0 10px;
+    cursor: pointer;
+    margin-top: -45px;
+}
+.slide-logo span:hover {
+    box-shadow: 0 0 3px 2px #eebd4a;
+    border-radius: 5px;
+}
+.bar {
+    display: none;
+    font-size: 28px;
+    padding: 0px 5px;
+    color: rgb(41, 2, 2);
+    cursor: pointer;
+}
+.bar:hover {
+    box-shadow: 0 0 3px 2px #eebd4a;
+    border-radius: 5px;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 998; 
+    display: none; 
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 1198px) {
+    .logout {
+   margin-right: 5px;
+  }
+    .menu {
+        display: none !important;
+    }
+
+    .bar {
+        display: block;
+    }
+
+}
+        .main-content{
+           text-align: center;
+           padding-top: 100px;
+    
+        }
+        .main-content h1{
+            font-size: 50px; 
+            font-weight: 700;
+            color:#3E2D18;
+            font-family: 'Roboto', sans-serif;
+         
+        }
+        .main-content p{
+            font-size: 20px;
+             font-weight: 400;
+             color:#4d4035;
+             font-family: 'Open Sans', sans-serif;
+        }
+        .parent{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 50px;
+            margin:30px auto;
+            padding: 20px;
+            max-width: 1200px;
+        }
+        .child{
+             
+              color: white;
+              font-size: 20px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: flex-start;
+              border: 2px solid  #e4c484;
+              background-color: white;
+              width: 100%;
+             height: 430px;
+             border-radius: 10px;
+             margin-bottom: 30px;
+             
+        }
+        .child img{
+              width: 100%;
+              height: 200px;
+              border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
+              object-fit: cover;
+        }
+        .child:hover{
+            transform: scale(1.03);
+            box-shadow: 0px 0px 10px 10px rgba(244, 226, 158, 0.3);
+
+        }
+        .child h2{
+            color:#3E2D18;
+           margin: 10px 0 4px 20px;
+           font-weight: 700;
+            align-self:flex-start;
+            font-family: 'Roboto', sans-serif;
+            font-size: 24px;
+           
+        }
+        .child p{
+             color: #4d4035;
+             margin-left: 20px;
+            align-self:flex-start;
+            margin-top: 10px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 20px;
+           
+        }
+        .child span{
+            color: #000;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 20px;
+            font-weight: 800;
+           
+        }
+.visithere{
+    width: 100%;
+    max-width: 300px;
+    height: 40px;
+    border-radius: 20px;
+     background: linear-gradient(to right, #edb640,#f7e7b3);
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    align-content: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: black;
+     transition: 0.3s linear;
+     box-shadow: 0px 8px 16px rgba(209, 163, 60, 0.3);
+     font-family: 'Roboto', sans-serif;
+     cursor: pointer;
+     
+}
+.visithere::before{
+    z-index: -1;
+    position: absolute;
+    content:" ";
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    align-content: center;
+    border-radius: 10px;
+    background-color: #b87c03;
+    transform: translateX(-300px);
+    transition: transform .3s linear;
+    opacity: 0.3;
+}
+.visithere:hover::before{
+    transform:translateX(0px);
+    
+} 
+.visithere:hover{
+     transform: scale(1.09);
+   box-shadow: 0px 0px 10px 15px rgba(244, 226, 158, 0.3);
+} 
+i{
+   color:#826d5c !important;
+}
+     @media (max-width: 992px) {
+    .parent {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .parent {
+        grid-template-columns: 1fr;
+    }
+}
+a.visithere {
+    text-decoration: none; 
+    display: inline-block; 
+}
+
+
+
+
+
+  footer.footer {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 20px 60px;
+  background-image: linear-gradient(to bottom right, #392819, #1a0e04);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+.border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4.5px;
+  background: linear-gradient(to right, #d4a339, #f9e3a4);
+  border: 1px solid rgb(56, 19, 19);
+}
+.footer-col {
+  flex: 1;
+  min-width: 240px;
+}
+
+.footer-col h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #e0c791;
+}
+
+.footer-col p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 15px;
+  font-size: 16px; 
+}
+.footer-col ul li i{
+  margin-bottom: 14px;
+  font-size: 16px; 
+  margin-right:10px ;
+}
+.footer-col ul li a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+  color: rgb(225, 179, 61);
+  margin-left: 5px;
+}
+
+.footer-col.about .social {
+  display: flex;
+  margin-top: 15px;
+  max-width: 250px;
+}
+.footer-col.about .social a {
+  color: white;
+  font-size: 20px;
+  margin-right: 20px;
+  transition: color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.footer-col.about .social a:hover {
+  color: rgb(223, 177, 61);
+  transform: scale(1.2);
+}
+
+.update form {
+  margin-top: 15px;
+}
+
+.update input[type="email"] {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 14px;
+  border: 1px solid #e0c791;
+  border-radius: 6px;
+  background-color: #2c1d11;
+  color: #fff;
+}
+
+.update input::placeholder {
+  color: #aaa;
+}
+.update input:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 6px 3px rgba(223, 177, 61, 0.6);
+}
+.update button {
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 30px;
+    background: linear-gradient(to right, #d4a339, #f7e7b3);
+    font-size: 18px;
+    padding: 8px 26px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: rgba(41, 2, 2, 0.85);
+    transition: 0.3s linear;
+    box-shadow: 0px 6px 10px rgba(201, 153, 49, 0.3);
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+}
+
+.update button::before {
+    z-index: -1;
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #b87c03;
+    transform: translateX(-100%);
+    transition: transform .5s linear;
+    opacity: 0.3;
+}
+
+.update button:hover::before {
+    transform: translateX(0px);
+}
+
+.update button:hover {
+    transform: scale(1.04);
+    box-shadow: 0px 0px 5px 2px rgba(238, 214, 126, 0.8);
+}
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  margin-top: -35px;
+  border-top: 1px solid rgba(212, 163, 57, 0.3);
+}
+
+.footer-bottom p {
+  color: white;
+  font-size: 14px;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+.footer i{
+  color:white !important;
+}
+
+@media (max-width: 800px) {
+  footer.footer {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 20px 20px;
+  }
+}
+
+
+        </style>
+    </head>
+    <body>
+          <!-- Header -->
+        <div class="header">
+            <div class="logo"><img width="130px" height="100px" src="./logo.png"/></div>
+            
+             <div class="menu">
+                <a href="home.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="startup.html">Startups</a>
+                <a href="resume_html.html">Resumes</a>
+                <a href="internships.html" style="color: #d4a339; text-decoration: none;">Hirings</a>
+                <a href="Tech360.html">TechResources</a>
+                <a href="ContestTrack.html">ContestTrack</a>
+            </div>
+
+             <div class="right-group">
+                   <a href="index.html" class="logout" style="text-decoration: none;">Logout</a>
+    <div class="bar" onclick="openn()">&#9776;</div>
+  </div>
+        </div>
+
+        <!-- Slide Bar -->
+        <div class="slide-menu">
+            <div class="slide-logo">
+                <img width="100px" height="80px" src="logo.png"/>
+                <span onclick="cloose()">&times;</span>
+            </div>
+                <a href="home.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="startup.html">Startups</a>
+                <a href="resume_html.html">Resumes</a>
+                <a href="internships.html" style="color: #d4a339; text-decoration: none;">Hirings</a>
+                <a href="Tech360.html">TechResources</a>
+                <a href="ContestTrack.html">ContestTrack</a>
+        </div>
+     <div class="overlay" onclick="cloose()"></div>
+
+        <!-- slide bar script -->
+    <script>
+      function openn() {
+            document.getElementsByClassName("slide-menu")[0].style.left = "0px";
+            document.querySelector(".overlay").style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+
+        function cloose() {
+            document.getElementsByClassName("slide-menu")[0].style.left = "-250px";
+            document.querySelector(".overlay").style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    </script>
+        <div class="main-content">
+
+        <h1>Internship Programs</h1>
+        <p>Launch your career with our industry-leading internship programs. Gain hands-on<br/> experience, receive mentorship from experts, and build a strong professional network.</p>
+        </div>
+        <div class="parent">
+            <div class="child"><img src="https://cdn.arstechnica.net/wp-content/uploads/2019/05/getty-googleplex-office-1.jpg"/>
+            <h2>Google STEP <br/>Internship </h2>
+            <p><i class="fa-solid fa-people-group" style="color: #00060f;"></i> <span>1,394</span> Applied <br/><br/>
+            <i class="fa-solid fa-indian-rupee-sign" style="color: #000000;"></i> 80K/month–₹1.2 L/month</p>
+             <div class="visithere">
+                 <a href="./gooogle.html" target="_self" class="visithere">VISIT HERE</a></div>
+            </div>
+            
+             <div class="child"><img src="https://techcrunch.com/wp-content/uploads/2022/05/GettyImages-1354846583.jpeg?w=1390&crop=1"/>
+            <h2>Microsoft India <br/>Explore Internship</h2>
+            <p><i class="fa-solid fa-people-group" style="color: #00060f;"></i> <span>2,140</span> Applied <br/><br/>
+            <i class="fa-solid fa-indian-rupee-sign" style="color: #000000;"></i> 80K/month–₹1.2 L/month</p>
+             <div class="visithere"> <a href="./microsoft.html" target="_self" class="visithere">VISIT HERE</a></div></div>
+              <div class="child"><img src="https://thumbs.dreamstime.com/b/brno-czechia-november-infosys-indian-company-specialized-outsourcing-business-consulting-information-technology-171848142.jpg"/>
+            <h2>Infosys InStep<br/> Global Internship</h2>
+            <p><i class="fa-solid fa-people-group" style="color: #00060f;"></i> <span>2,140</span> Applied <br/><br/>
+            <i class="fa-solid fa-indian-rupee-sign" style="color: #000000;"></i>25K/month–30K/month</p>
+             <div class="visithere"><a href="./infosys.html" target="_self" class="visithere">VISIT HERE</a></div>
+          </div>
+               <div class="child"> <img src="https://www.india.com/wp-content/uploads/2021/10/TCS-Work-From-Office-Home-Latest-News.jpg"/>
+            <h2>TCS Ignite / Smart <br/>Hiring Internship</h2>
+            <p><i class="fa-solid fa-people-group" style="color: #00060f;"></i> <span>3,410</span> Applied <br/><br/>
+            <i class="fa-solid fa-indian-rupee-sign" style="color: #000000;"></i>15K/month–25K/month</p>
+             <div class="visithere"><a href="./tcs.html" target="_self" class="visithere">VISIT HERE</a></div>
+               </div>
+                <div class="child"><img src="https://investinholland.com/wp-content/uploads/2019/06/Wipro-2.jpg"/>
+            <h2>Wipro SIM / Velocity <br/> Internship</h2>
+            <p><i class="fa-solid fa-people-group" style="color: #00060f;"></i> <span>2,770</span> Applied <br/><br/>
+            <i class="fa-solid fa-indian-rupee-sign" style="color: #000000;"></i>5K/month–20K/month</p>
+             <div class="visithere"><a href="./wipro.html" target="_self" class="visithere">VISIT HERE</a></div> 
+                </div>
+                 <div class="child"><img src="https://si.wsj.net/public/resources/images/BN-XG332_3gck1_OR_20180131152141.jpg?width=620&height=413"/>
+            <h2>Quallcomm Engineering <br/> Internship </h2>
+            <p><i class="fa-solid fa-people-group" style="color: #00060f;"></i> <span>2,310</span> Applied <br/><br/>
+            <i class="fa-solid fa-indian-rupee-sign" style="color: #000000;"></i>42K/month</p>
+             <div class="visithere"><a href="./Quallcom.html" target="_self" class="visithere">VISIT HERE</a></div> 
+                 </div>
+                  <div class="child"><img src="https://headquartersoffice.com/wp-content/uploads/2017/08/Seagate_Technology_HQ.png"/>
+            <h2>Seagate Gen AI / ML <br/>Internship </h2>
+            <p><i class="fa-solid fa-people-group" style="color: #00060f;"></i> <span>2,670</span> Applied <br/><br/>
+            <i class="fa-solid fa-indian-rupee-sign" style="color: #000000;"></i>40K/month–45K/month</p>
+             <div class="visithere"><a href="./seagate.html" target="_self" class="visithere">VISIT HERE</a></div> 
+                  </div>
+                   <div class="child"><img src="https://headquartersoffice.com/wp-content/uploads/2020/08/ibm_headquarters-768x509.jpg"/>
+            <h2>IBM–IIT Kharagpur<br/>Summer Internship </h2>
+            <p><i class="fa-solid fa-people-group" style="color: #00060f;"></i> <span>3,150</span> Applied <br/><br/>
+            <i class="fa-solid fa-indian-rupee-sign" style="color: #000000;"></i>10K/month–15K/month </p>
+             <div class="visithere"><a href="./IBM.html" target="_self" class="visithere">VISIT HERE</a></div>
+                   </div>
+                     <div class="child"><img src="https://s.yimg.com/uu/api/res/1.2/Ayp0iAw8WX0UkBfl3sABlA--~B/aD0xODAwO3c9MjcwMDtzbT0xO2FwcGlkPXl0YWNoeW9u/http://media.zenfs.com/en-US/homerun/people_218/c1e1fba2e8f76a3b92a8bee9af863ab7"/>
+            <h2>Amazon SDE<br/> Internship </h2>
+            <p><i class="fa-solid fa-people-group" style="color: #00060f;"></i> <span>5,050</span> Applied <br/><br/>
+            <i class="fa-solid fa-indian-rupee-sign" style="color: #000000;"></i>₹80K/month–₹1L/month </p>
+             <div class="visithere"><a href="./amazon.html" target="_self" class="visithere">VISIT HERE</a></div>
+                     </div>
+        </div>
+
+
+         <div class="main-content">
+
+        <h1>Job Opportunities</h1>
+        <p>Begin your professional journey with top job roles in leading companies. Work on impactful <br/>projects, grow with industry mentors, and advance your career in a dynamic and innovative environment.</p>
+        </div>
+        <div class="parent">
+            <div class="child"><img src="https://media.glassdoor.com/l/1f/2c/d8/ed/nhq.jpg"/><br/>
+            <h2>Reliance Jio</h2>
+            <p><i class="fa-solid fa-people-group" style="color: #00060f;"></i> <span>2,112</span> Applied <br/><br/>
+            <i class="fa-solid fa-indian-rupee-sign" style="color: #000000;"></i> 6 LPA-12 LPA</p>
+             <div class="visithere">
+                 <a href="./reliance.html" target="_self" class="visithere">VISIT HERE</a></div>
+            </div>
+            
+             <div class="child"><img src="https://bsmedia.business-standard.com/_media/bs/img/article/2023-08/12/thumb/fitandfill/600X300/1691816958-8493.jpg"/><br/>
+            <h2>HCL Tech</h2>
+            <p><i class="fa-solid fa-people-group" style="color: #00060f;"></i> <span>2,112</span> Applied <br/><br/>
+            <i class="fa-solid fa-indian-rupee-sign" style="color: #000000;"></i>7 LPA-14 LPA</p>
+             <div class="visithere"> <a href="./Hcl.html" target="_self" class="visithere">VISIT HERE</a></div>
+            </div>
+             
+             <div class="child"><img src="https://i.pinimg.com/originals/80/55/ba/8055ba494dc0ca3f1cc05d6ab3f0b084.jpg"/><br/>
+            <h2> Capgemini</h2>
+            <p><i class="fa-solid fa-people-group" style="color: #00060f;"></i> <span>3,015</span> Applied <br/><br/>
+            <i class="fa-solid fa-indian-rupee-sign" style="color: #000000;"></i>6 LPA-11 LPA</p>
+             <div class="visithere"> <a href="./Capgemini.html" target="_self" class="visithere">VISIT HERE</a></div>
+            </div>
+             
+             <div class="child"><img src="https://images.livemint.com/img/2021/10/28/1600x900/Cognizant_Mangalore_Feb7_2020_2_1581097237290_1635420839473.jpg"/><br/>
+            <h2>Cognizant</h2>
+            <p><i class="fa-solid fa-people-group" style="color: #00060f;"></i> <span>3,780</span> Applied <br/><br/>
+            <i class="fa-solid fa-indian-rupee-sign" style="color: #000000;"></i>7 LPA– 14 LPA</p>
+             <div class="visithere"> <a href="./cognizant.html" target="_self" class="visithere">VISIT HERE</a></div>
+            </div>
+             
+             <div class="child"><img src="https://bl-i.thgim.com/public/incoming/c6r3aw/article66153632.ece/alternates/LANDSCAPE_1200/LTIMindtree%20Building.jpg"/><br/>
+            <h2>LTIMindtree</h2>
+            <p><i class="fa-solid fa-people-group" style="color: #00060f;"></i> <span>3,487</span> Applied <br/><br/>
+            <i class="fa-solid fa-indian-rupee-sign" style="color: #000000;"></i>6 LPA-12 LPA</p>
+             <div class="visithere"> <a href="./LTIMindtree.html" target="_self" class="visithere">VISIT HERE</a></div>
+            </div>
+             
+             <div class="child"><img src="https://cdn.zeebiz.com/sites/default/files/2019/01/15/68745-flipkart-reuters.JPG"/><br/>
+            <h2> Flipkart</h2>
+            <p><i class="fa-solid fa-people-group" style="color: #00060f;"></i> <span>4,132</span> Applied <br/><br/>
+            <i class="fa-solid fa-indian-rupee-sign" style="color: #000000;"></i>18 LPA-30 LPA</p>
+             <div class="visithere"> <a href="./flipkart.html" target="_self" class="visithere">VISIT HERE</a></div>
+            </div>
+             
+             <div class="child"><img src="https://fubbi.co/wp-content/uploads/2018/05/Fubbi-Image-39.gif"/><br/>
+            <h2>Zoho</h2>
+            <p><i class="fa-solid fa-people-group" style="color: #00060f;"></i> <span>1,742</span> Applied <br/><br/>
+            <i class="fa-solid fa-indian-rupee-sign" style="color: #000000;"></i>6 LPA-10 LPA</p>
+             <div class="visithere"> <a href="./Zoho.html" target="_self" class="visithere">VISIT HERE</a></div>
+            </div>
+             
+             <div class="child"><img src="https://contentstatic.techgig.com/photo/102007678/deloitte-plans-to-open-3-new-offices-in-india-will-hire-more-techies.jpg?75232"/><br/>
+            <h2> Deloitte India </h2>
+            <p><i class="fa-solid fa-people-group" style="color: #00060f;"></i> <span>4,310</span> Applied <br/><br/>
+            <i class="fa-solid fa-indian-rupee-sign" style="color: #000000;"></i>8 LPA– 14 LPA</p>
+             <div class="visithere"> <a href="./Deloitte.html" target="_self" class="visithere">VISIT HERE</a></div>
+            </div>
+             
+             <div class="child"><img src="https://static.ambitionbox.com/api/v2/photo/SXg0S1RmQmg3TTZycVpYVVpCTkRCQT09"/><br/>
+            <h2> Byju’s</h2>
+            <p><i class="fa-solid fa-people-group" style="color: #00060f;"></i> <span>5,040</span> Applied <br/><br/>
+            <i class="fa-solid fa-indian-rupee-sign" style="color: #000000;"></i>7 LPA-12 LPA</p>
+             <div class="visithere"> <a href="./byjus.html" target="_self" class="visithere">VISIT HERE</a></div>
+            </div>
+</div>
+
+             <footer class="footer">
+                <div class="border"></div>
+        <div class="footer-col about">
+            <h2>Tech360</h2>
+            <p>Empowering retail excellence through innovative solutions and comprehensive training programs. Building the future of retail, one professional at a time.</p>
+            <div class="social">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col quick-links">
+            <h2>Quick Links</h2>
+            <ul>
+            <li><a href="#">→  Home</a></li>
+            <li><a href="#">→  Projects</a></li>
+            <li><a href="#">→  Startups</a></li>
+            <li><a href="#">→  Resumes</a></li>
+            <li><a href="#">→  Hirings</a></li>
+            <li><a href="#">→  TechResources</a></li>
+            <li><a href="#">→  ContestTrack</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col contact">
+            <h2>Contact Us</h2>
+            <ul>
+            <li><i class="fas fa-map-marker-alt"></i>Jubli Hills,Hyderabad,India</li>
+            <li><i class="fas fa-phone"></i> +91 8757728679</li>
+            <li><i class="fas fa-envelope"></i> tech360@gmail.com</li>
+            </ul>
+        </div>
+
+        <div class="footer-col update">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter for the latest updates and insights.</p>
+        <form id="subscribeForm" action="https://formsubmit.co/damisettilohitha@gmail.com" method="POST">
+        <input type="email" name="email" id="emailInput" required placeholder="Enter your email" />
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="">
+        <button type="submit">Subscribe</button>
+        </form>
+
+        </div>
+         <div class="footer-bottom">
+        <p>© 2025 <span style="color:#d4a339" >Tech360 Pvt Ltd</span>. All rights reserved.</p>
+        </div>
+          <script src="./footer.js"  ></script> 
+    </footer>
+    </body>
+</html> 

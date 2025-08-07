@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DSA Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+
+    body {
+      background: linear-gradient(135deg, #e9c76a, #fdf5d9, #e9c76a);
+      padding: 30px;
+      color: #3b3b3b;
+      overflow-x: hidden;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 40px;
+      color: #8b6f2f;
+      text-shadow: 1px 1px 1px #f5f5dc;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .project-card {
+      background: #fffaf0;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(139, 111, 47, 0.2);
+      border: 1px solid #e9c76a;
+      opacity: 0;
+      animation: fadeInUp 1s forwards;
+    }
+
+    .project-card:nth-child(odd) {
+      animation-name: slideInLeft;
+    }
+
+    .project-card:nth-child(even) {
+      animation-name: slideInRight;
+    }
+
+    .project-title {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #b28b32;
+    }
+
+    .project-description {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My DSA Projects</h1>
+
+  <div class="projects-container">
+
+  <div class="project-card">
+    <div class="project-title">1. Sorting Visualizer</div>
+    <div class="project-description">
+      An interactive visual tool that demonstrates how sorting algorithms work in real-time. Users can adjust array size and speed, and observe comparisons and swaps during execution of algorithms like Bubble Sort, Merge Sort, and Quick Sort. Great for learning and teaching core sorting logic.
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-title">2. Pathfinding Algorithms</div>
+    <div class="project-description">
+      A grid-based visual simulation of pathfinding techniques including A*, Dijkstra’s algorithm, and Breadth-First Search. Allows wall placements, start/end adjustments, and shows how different algorithms explore the grid to find the shortest path.
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-title">3. Binary Tree Operations</div>
+    <div class="project-description">
+      Implementation of various binary tree functionalities in C++, such as insertion, deletion, in-order, pre-order, and post-order traversals. Includes console-based visual outputs and optional depth calculation. Helps understand tree structures and recursive algorithms.
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-title">4. LRU Cache</div>
+    <div class="project-description">
+      Java-based Least Recently Used (LRU) cache implementation using LinkedHashMap. Provides constant-time complexity for insertion and retrieval. Simulates memory cache behavior, often used in systems that need efficient eviction policies.
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-title">5. Graph Algorithms</div>
+    <div class="project-description">
+      C++ implementations of essential graph algorithms like Depth First Search, Breadth First Search, and Kruskal's Minimum Spanning Tree algorithm. Supports both directed and undirected graphs using adjacency lists, and includes weighted edge handling.
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-title">6. Stack and Queue Simulator</div>
+    <div class="project-description">
+      An animated interface demonstrating how stacks (LIFO) and queues (FIFO) operate. Supports push, pop, enqueue, dequeue actions with visual feedback. Ideal for understanding data structure behavior through intuitive simulations.
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-title">7. Dynamic Programming Playground</div>
+    <div class="project-description">
+      A collection of classical dynamic programming problems such as Knapsack, Longest Common Subsequence, and Matrix Chain Multiplication. Each problem includes bottom-up and top-down implementations with memoization and time complexity analysis.
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="project-title">8. Trie Data Structure</div>
+    <div class="project-description">
+      Java implementation of a Trie (prefix tree) with support for insert, search, delete, and autocomplete operations. Efficiently handles word storage and prefix matching, useful in applications like spell-checking and predictive text.
+    </div>
+  </div>
+
+</div>
+
+
+</body>
+</html>

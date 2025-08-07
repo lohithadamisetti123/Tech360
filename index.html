@@ -1,0 +1,89 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="login_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <ul class="background-squares">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+<div class="container">
+        <div class="form-box-login">
+            <form action="">
+                <h1>Sign in</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" id="signin-username" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" id="signin-password" required>
+                    <i class="fa-solid fa-eye" id="toggle-signin-password"></i>
+                </div>
+                <div class="forgot-link">
+                    <a href="forget_pass.html">Forgot Password?</a>
+                </div>
+                <p id="signin-error" class="error-message"></p>
+                <button type="submit" class="btn login">SignIn</button>
+            </form>
+        </div>
+        <div class="form-box-register">
+            <form action="">
+                <h1>Sign up</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" id="signup-username" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="email" placeholder="Email" id="signup-email" required>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" id="signup-password" required>
+                    <i class="fa-solid fa-eye" id="toggle-signup-password"></i>
+                </div>
+                <button type="submit" class="btn signup">SignUp</button>
+            </form>
+        </div>
+        <div class="toggle-box">
+            <div class="toggle-panel toggle-left">
+                <h1>Hello, Welcome</h1>
+                <p>Don't have an account?</p>
+                <button class="btn signup-toggle">SignUp</button>
+            </div>
+
+            <!-- This is the right toggle panel (when in signup mode) -->
+            <div class="toggle-panel toggle-right">
+                <h1>Welcome Back!</h1>
+                <p>Already have an account?</p>
+                <button class="btn signin-toggle">SignIn</button>
+            </div>
+        </div>
+    </div>
+    <script src="login_page.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+
+<!-- Replace this entire HTML with your current HTML file -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Byju’s Job Openings</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    const deadline = new Date("2025-08-08T15:07:59");
+    function updateCountdown() {
+      const now = new Date();
+      const diff = deadline - now;
+      if (diff <= 0) {
+        document.getElementById("countdown").textContent = "Application closed!";
+        clearInterval(timerInterval);
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      document.getElementById("countdown").textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+    const timerInterval = setInterval(updateCountdown, 1000);
+    window.onload = updateCountdown;
+  </script>
+</head>
+<body>
+  <div class="header">
+    <div class="logo"><img width="130px" height="100px" src="./logo.png"/></div>
+    <div class="right-group">
+      <div class="logout">Logout</div>
+      <div class="bar" onclick="openn()">&#9776;</div>
+    </div>
+  </div>
+
+  <div class="slide-menu">
+    <div class="slide-logo">
+      <img width="100px" height="80px" src="./logo.png"/>
+      <span onclick="cloose()">&times;</span>
+    </div>
+    <a>Home</a>
+    <a>Projects</a>
+    <a>Startups</a>
+    <a>Resumes</a>
+    <a>Hirings</a>
+    <a>TechResources</a>
+    <a>ContestTrack</a>
+  </div>
+  <div class="overlay" onclick="cloose()"></div>
+
+  <script>
+    function openn() {
+      document.getElementsByClassName("slide-menu")[0].style.left = "0px";
+      document.querySelector(".overlay").style.display = "block";
+      document.body.style.overflow = "hidden";
+    }
+    function cloose() {
+      document.getElementsByClassName("slide-menu")[0].style.left = "-250px";
+      document.querySelector(".overlay").style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  </script>
+
+  <div class="container">
+    <div class="top-section">
+      <div class="left">
+        <div class="header-card">
+          <div class="logo-box">
+            <img src="https://logos-world.net/wp-content/uploads/2021/08/Byjus-Emblem.png" alt="Byju’s Logo" />
+          </div>
+          <div class="job-info">
+            <h1>Byju’s</h1>
+            <div class="meta-info">Byju’s &nbsp; | &nbsp; Updated On: Aug 08, 2025</div>
+          </div>
+          <div class="day-box">
+            <i class="fa-regular fa-calendar"></i>
+            <div id="countdown">Loading...</div>
+          </div>
+        </div>
+
+        <div class="details-section">
+          <h2>About the Job Role:</h2>
+          <p>Byju’s is looking for passionate and driven individuals to join our dynamic team across sales, content creation, tech, and operations. This is an opportunity to be part of India’s largest ed-tech company and impact millions of students globally.</p>
+          <h3>Key Responsibilities:</h3>
+          <ul>
+            <li>Engage with students and parents to understand learning needs</li>
+            <li>Deliver product presentations and sales pitches effectively</li>
+          </ul>
+          <h2>Skills and Qualifications:</h2>
+          <h3>Technical:</h3>
+          <ul>
+            <li>Familiarity with digital tools and CRM systems</li>
+            <li>Basic knowledge of HTML, content platforms, or app-based tools is a plus</li>
+          </ul>
+          <h3>Soft Skills:</h3>
+          <ul>
+            <li>Strong communication and persuasion skills</li>
+            <li>Ability to thrive in fast-paced, goal-driven environments</li>
+          </ul>
+          <h2>Experience:</h2>
+          <ul>
+            <li>Fresh graduates or up to 2 years of experience</li>
+            <li>Bachelor’s degree in any discipline (preferably in sales, marketing, or education)</li>
+            <li>Comfortable working in a target-driven role</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <div class="card">
+          <p><strong>Impressions:</strong> 35,728</p>
+          <p><strong>Applied:</strong> 5,409</p>
+          <div class="button-container">
+            <a href="https://byjus.com/careers/" target="_self" class="Applynow">APPLY NOW</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Eligibility</h3>
+          <ul>
+            <li><p>Bachelor’s Degree (Any stream)</p></li>
+            <li><p>0–2 years of experience</p></li>
+            <li><p>Strong verbal communication skills</p></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Available Roles</h3>
+          <ul>
+            <li>Business Development Associate <br/> PAN India <br/> Full-time</li>
+            <li>Academic Specialist <br/> Bangalore <br/> Full-time</li>
+            <li>Content Developer <br/> Remote <br/> Full-time</li>
+            <li>Sales Executive <br/> Hyderabad <br/> Full-time</li>
+            <li>Operations Coordinator <br/> Mumbai <br/> Full-time</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   <footer class="footer-bottom">
+  <p>© 2025 <span class="brand-highlight">Tech360 Pvt Ltd</span>. All rights reserved.</p>
+</footer>
+</body>
+</html>

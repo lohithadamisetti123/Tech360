@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contest Tracker</title>
+  <link rel="stylesheet" href="ContestTrack.css"/>
+</head>
+<body>
+  <div class="header">
+            <div class="logo"><img width="130px" height="100px" src="logo.png"/></div>
+          <div class="menu">
+                <a href="home.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="startup.html">Startups</a>
+                <a href="resume_html.html">Resumes</a>
+                <a href="internships.html">Hirings</a>
+                <a href="Tech360.html">TechResources</a>
+                <a href="ContestTrack.html" style="color: #d4a339;text-decoration: none;">ContestTrack</a>
+            </div>
+
+             <div class="right-group">
+                   <a href="index.html" class="logout" style="text-decoration: none;">Logout</a>
+    <div class="bar" onclick="openn()">&#9776;</div>
+  </div>
+        </div>
+
+        <!-- Slide Bar -->
+        <div class="slide-menu">
+            <div class="slide-logo">
+                <img width="100px" height="80px" src="logo.png"/>
+                <span onclick="cloose()">&times;</span>
+            </div>
+                <a href="TechHomePage.html" >Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="startup.html">Startups</a>
+                <a href="resume_html.html">Resumes</a>
+                <a href="internships.html">Hirings</a>
+                <a href="Tech360.html">TechResources</a>
+                <a href="ContestTrack.html" style="color: #d4a339;text-decoration: none;>ContestTrack</a>
+        </div>
+     <div class="overlay" onclick="cloose()"></div>
+
+        <!-- slide bar script -->
+    <script>
+      function openn() {
+            document.getElementsByClassName("slide-menu")[0].style.left = "0px";
+            document.querySelector(".overlay").style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+
+        function cloose() {
+            document.getElementsByClassName("slide-menu")[0].style.left = "-250px";
+            document.querySelector(".overlay").style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    </script>
+    <div class="content-wrapper">
+  <main>
+    <section class="platform" id="geeksforgeeks" tabindex="-1">
+    <div class="platform-banner">
+      <img width="300" src="https://tse4.mm.bing.net/th/id/OIP.9EpMdgmdRO48As0fk0pB7QHaFM?pid=Api&P=0&h=180" alt="GeeksforGeeks">
+      <h2>GeeksforGeeks</h2>
+    </div>
+    <div class="contest-process">
+      <strong>Contest Process:</strong>
+      <ol>
+        <li>Register for upcoming contests before they start.</li>
+        <li>At the start time, access the problem set.</li>
+        <li>Submit solutions within the time limit; instant feedback is provided.</li>
+        <li>View real-time leaderboards and statistics.</li>
+        <li>After the contest, review editorials and standings.</li>
+      </ol>
+    </div>
+    <div class="contest-info-wrapper">
+      <div class="contest-details">
+        <div><strong>Duration:</strong> 3 hours</div>
+        <div><strong>Start Date:</strong> 2025‑08‑10 15:00 IST</div>
+        <div><strong>End Date:</strong> 2025‑08‑10 18:00 IST</div>
+      </div>
+      <div class="contest-timer-block">
+        <div class="contest-timer">
+          Starts In: <span class="timer" data-contest-time="2025-08-10T15:00:00+05:30">Loading...</span>
+        </div>
+        <a href="https://practice.geeksforgeeks.org/events/contest" target="_blank" class="contest-link" rel="noopener">Go to Contests →</a>
+      </div>
+    </div>
+    <div class="contest-lists">
+      <div class="upcoming-contests">
+        <h3>Upcoming Contests</h3>
+        <ul>
+          <li>August Challenge – 10 Aug, 3:00 PM IST</li>
+          <li>Weekly Coding Contest – 20 Aug, 6:00 PM IST</li>
+        </ul>
+      </div>
+      <div class="past-contests">
+        <h3>Past Contests</h3>
+        <ul>
+          <li>July Challenge – 15 July, Completed</li>
+          <li>May Circuit – 20 May, Completed</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. TopCoder -->
+  <section class="platform" id="topcoder" tabindex="-1">
+    <div class="platform-banner">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.27dvUsJuyxdq4N_KsnDV_QHaDv?pid=Api&P=0&h=180" alt="TopCoder">
+      <h2>TopCoder</h2>
+    </div>
+    <div class="contest-process">
+      <strong>Contest Process:</strong>
+      <ol>
+        <li>Register for contests ahead of time.</li>
+        <li>Coding phase begins with problem access.</li>
+        <li>Challenge phase: challenge other participants' solutions.</li>
+        <li>System tests run to validate submissions.</li>
+        <li>Final results and rankings are announced.</li>
+      </ol>
+    </div>
+    <div class="contest-info-wrapper">
+      <div class="contest-details">
+        <div><strong>Duration:</strong> 2.5 hours</div>
+        <div><strong>Start Date:</strong> 2025‑08‑15 18:00 UTC</div>
+        <div><strong>End Date:</strong> 2025‑08‑15 20:30 UTC</div>
+      </div>
+      <div class="contest-timer-block">
+        <div class="contest-timer">
+          Starts In: <span class="timer" data-contest-time="2025-08-15T18:00:00Z">Loading...</span>
+        </div>
+        <a href="https://www.topcoder.com/challenges" target="_blank" class="contest-link" rel="noopener">Go to Contests →</a>
+      </div>
+    </div>
+    <div class="contest-lists">
+      <div class="upcoming-contests">
+        <h3>Upcoming Contests</h3>
+        <ul>
+          <li>SRM 789 – 15 Aug, 6:00 PM UTC</li>
+          <li>Marathon Match Aug – 25 Aug, 5:00 PM UTC</li>
+        </ul>
+      </div>
+      <div class="past-contests">
+        <h3>Past Contests</h3>
+        <ul>
+          <li>SRM 788 – 10 July, Completed</li>
+          <li>Single Round Match 787 – 5 June, Completed</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. HackerRank -->
+  <section class="platform" id="hackerrank" tabindex="-1">
+    <div class="platform-banner">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.Ta6HehyQ6i9VrcNWWTavBwHaFj?pid=Api&P=0&h=180" alt="HackerRank">
+      <h2>HackerRank</h2>
+    </div>
+    <div class="contest-process">
+      <strong>Contest Process:</strong>
+      <ol>
+        <li>Register for contest start time.</li>
+        <li>Problems are released at contest start.</li>
+        <li>Submit your solutions with instant feedback and scoring.</li>
+        <li>Ranking updates live based on performance.</li>
+        <li>Post-contest editorials available for learning.</li>
+      </ol>
+    </div>
+    <div class="contest-info-wrapper">
+      <div class="contest-details">
+        <div><strong>Duration:</strong> 3 hours</div>
+        <div><strong>Start Date:</strong> 2025‑08‑22 14:00 UTC</div>
+        <div><strong>End Date:</strong> 2025‑08‑22 17:00 UTC</div>
+      </div>
+      <div class="contest-timer-block">
+        <div class="contest-timer">
+          Starts In: <span class="timer" data-contest-time="2025-08-22T14:00:00Z">Loading...</span>
+        </div>
+        <a href="https://www.hackerrank.com/domains/contests" target="_blank" class="contest-link" rel="noopener">Go to Contests →</a>
+      </div>
+    </div>
+    <div class="contest-lists">
+      <div class="upcoming-contests">
+        <h3>Upcoming Contests</h3>
+        <ul>
+          <li>Monthly Code Challenge – 22 Aug, 2:00 PM UTC</li>
+          <li>University Cup – 30 Aug, 5:00 PM UTC</li>
+        </ul>
+      </div>
+      <div class="past-contests">
+        <h3>Past Contests</h3>
+        <ul>
+          <li>30 Days of Code – 1 July, Completed</li>
+          <li>CodeSprint – 10 June, Completed</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. ICPC -->
+  <section class="platform" id="icpc" tabindex="-1">
+    <div class="platform-banner">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.tHW8BPOzoe6_IjqR4SFHcgHaC_?pid=Api&P=0&h=180" alt="ICPC">
+      <h2>International Collegiate Programming Contest (ICPC)</h2>
+    </div>
+    <div class="contest-process">
+      <strong>Contest Process:</strong>
+      <ol>
+        <li>Teams qualify through regional contests.</li>
+        <li>Top teams proceed to World Finals.</li>
+        <li>Team-based problem solving with time limits.</li>
+        <li>Solutions submitted to a judging system onsite.</li>
+        <li>Winners are announced based on number of solved problems and time penalties.</li>
+      </ol>
+    </div>
+    <div class="contest-info-wrapper">
+      <div class="contest-details">
+        <div><strong>Duration:</strong> 5 hours</div>
+        <div><strong>Start Date:</strong> 2025‑09‑01 09:00 UTC</div>
+        <div><strong>End Date:</strong> 2025‑09‑01 14:00 UTC</div>
+      </div>
+      <div class="contest-timer-block">
+        <div class="contest-timer">
+          Starts In: <span class="timer" data-contest-time="2025-09-01T09:00:00Z">Loading...</span>
+        </div>
+        <a href="https://icpc.global/regionals" target="_blank" class="contest-link" rel="noopener">Go to Contests →</a>
+      </div>
+    </div>
+    <div class="contest-lists">
+      <div class="upcoming-contests">
+        <h3>Upcoming Contests</h3>
+        <ul>
+          <li>Asia Regional 2025 – 1 Sept, 9:00 AM UTC</li>
+          <li>Europe Regional 2025 – 10 Sept, 10:00 AM UTC</li>
+        </ul>
+      </div>
+      <div class="past-contests">
+        <h3>Past Contests</h3>
+        <ul>
+          <li>World Finals 2024 – 17 Dec, Completed</li>
+          <li>North America Regional 2024 – 5 Nov, Completed</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CodeChef -->
+  <section class="platform" id="codechef" tabindex="-1">
+    <div class="platform-banner">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.uGvujCpH8kxrW6ebnufkwgHaDn?pid=Api&P=0&h=180" alt="CodeChef">
+      <h2>CodeChef</h2>
+    </div>
+    <div class="contest-process">
+      <strong>Contest Process:</strong>
+      <ol>
+        <li>Register before contest start.</li>
+        <li>Participate in divisions based on rating.</li>
+        <li>Submit solutions during contest time.</li>
+        <li>Get real-time score and rankings.</li>
+        <li>Tutorial and editorial published post contest.</li>
+      </ol>
+    </div>
+    <div class="contest-info-wrapper">
+      <div class="contest-details">
+        <div><strong>Duration:</strong> 3 hours</div>
+        <div><strong>Start Date:</strong> 2025‑08‑28 16:00 IST</div>
+        <div><strong>End Date:</strong> 2025‑08‑28 19:00 IST</div>
+      </div>
+      <div class="contest-timer-block">
+        <div class="contest-timer">
+          Starts In: <span class="timer" data-contest-time="2025-08-06T10:30:00Z">Loading...</span>
+        </div>
+        <a href="https://www.codechef.com/contests" target="_blank" class="contest-link" rel="noopener">Go to Contests →</a>
+      </div>
+    </div>
+    <div class="contest-lists">
+      <div class="upcoming-contests">
+        <h3>Upcoming Contests</h3>
+        <ul>
+          <li>Weekly Contest – 6 Aug, 8:00 PM IST</li>
+          <li>September Cook‑Off – 5 Sept, 6:30 PM IST</li>
+        </ul>
+      </div>
+      <div class="past-contests">
+        <h3>Past Contests</h3>
+        <ul>
+          <li>July Challenge – 13 July, Completed</li>
+          <li>June Cook‑Off – 20 June, Completed</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. LeetCode -->
+  <section class="platform" id="leetcode" tabindex="-1">
+    <div class="platform-banner">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.DENauUixUf2DS-VfgKCXlAHaD2?pid=Api&P=0&h=180" alt="LeetCode">
+      <h2>LeetCode</h2>
+    </div>
+    <div class="contest-process">
+      <strong>Contest Process:</strong>
+      <ol>
+        <li>Register before contest starts.</li>
+        <li>Weekly or biweekly timed contest.</li>
+        <li>Score based on problems solved and speed.</li>
+        <li>Quality rankings and global leaderboard.</li>
+        <li>Post-contest editorial and solutions.</li>
+      </ol>
+    </div>
+    <div class="contest-info-wrapper">
+      <div class="contest-details">
+        <div><strong>Duration:</strong> 1.5 hours</div>
+        <div><strong>Start Date:</strong> 2025‑08‑18 20:30 UTC</div>
+        <div><strong>End Date:</strong> 2025‑08‑18 22:00 UTC</div>
+      </div>
+      <div class="contest-timer-block">
+        <div class="contest-timer">
+          Starts In: <span class="timer" data-contest-time="2025-08-18T20:30:00Z">Loading...</span>
+        </div>
+        <a href="https://leetcode.com/contest/" target="_blank" class="contest-link" rel="noopener">Go to Contests →</a>
+      </div>
+    </div>
+    <div class="contest-lists">
+      <div class="upcoming-contests">
+        <h3>Upcoming Contests</h3>
+        <ul>
+          <li>Weekly Contest #500 – 18 Aug, 8:30 PM UTC</li>
+          <li>Biweekly Contest #150 – 22 Aug, 8:30 PM UTC</li>
+        </ul>
+      </div>
+      <div class="past-contests">
+        <h3>Past Contests</h3>
+        <ul>
+          <li>Weekly Contest #499 – 11 Aug, Completed</li>
+          <li>Biweekly Contest #149 – 8 Aug, Completed</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Codeforces -->
+  <section class="platform" id="codeforces" tabindex="-1">
+    <div class="platform-banner">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.iPZ00kImJY8oVioV5Dy75AHaD4?pid=Api&P=0&h=180" alt="Codeforces">
+      <h2>Codeforces</h2>
+    </div>
+    <div class="contest-process">
+      <strong>Contest Process:</strong>
+      <ol>
+        <li>Register for contests via Codeforces platform.</li>
+        <li>Enter contest “room” on start.</li>
+        <li>Work on problems within the time limit.</li>
+        <li>Hacking phase to test other submissions.</li>
+        <li>Final standings announced, rating updated.</li>
+      </ol>
+    </div>
+    <div class="contest-info-wrapper">
+      <div class="contest-details">
+        <div><strong>Duration:</strong> 2 hours</div>
+        <div><strong>Start Date:</strong> 2025‑08‑13 16:00 UTC</div>
+        <div><strong>End Date:</strong> 2025‑08‑13 18:00 UTC</div>
+      </div>
+      <div class="contest-timer-block">
+        <div class="contest-timer">
+          Starts In: <span class="timer" data-contest-time="2025-08-13T16:00:00Z">Loading...</span>
+        </div>
+        <a href="https://codeforces.com/contests" target="_blank" class="contest-link" rel="noopener">Go to Contests →</a>
+      </div>
+    </div>
+    <div class="contest-lists">
+      <div class="upcoming-contests">
+        <h3>Upcoming Contests</h3>
+        <ul>
+          <li>Codeforces Round #860 – 13 Aug, 4:00 PM UTC</li>
+          <li>Educational Codeforces Round 150 – 20 Aug, 5:00 PM UTC</li>
+        </ul>
+      </div>
+      <div class="past-contests">
+        <h3>Past Contests</h3>
+        <ul>
+          <li>Codeforces Round #859 – 6 Aug, Completed</li>
+          <li>Div.2 Round #858 – 30 July, Completed</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. AtCoder -->
+  <section class="platform" id="atcoder" tabindex="-1">
+    <div class="platform-banner">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.5kh_ymfFK__UGjuXi16veAHaGE?pid=Api&P=0&h=180" alt="AtCoder">
+      <h2>AtCoder</h2>
+    </div>
+    <div class="contest-process">
+      <strong>Contest Process:</strong>
+      <ol>
+        <li>Register for contests before start.</li>
+        <li>6‑problem contests with set time limit.</li>
+        <li>Score based on problems solved and penalties.</li>
+        <li>Automatic grading with live scoreboard.</li>
+        <li>Rankings reflect solving speed and correctness.</li>
+      </ol>
+    </div>
+    <div class="contest-info-wrapper">
+      <div class="contest-details">
+        <div><strong>Duration:</strong> 2 hours</div>
+        <div><strong>Start Date:</strong> 2025‑08‑21 12:00 JST</div>
+        <div><strong>End Date:</strong> 2025‑08‑21 14:00 JST</div>
+      </div>
+      <div class="contest-timer-block">
+        <div class="contest-timer">
+          Starts In: <span class="timer" data-contest-time="2025-08-21T03:00:00Z">Loading...</span>
+        </div>
+        <a href="https://atcoder.jp/contests/" target="_blank" class="contest-link" rel="noopener">Go to Contests →</a>
+      </div>
+    </div>
+    <div class="contest-lists">
+      <div class="upcoming-contests">
+        <h3>Upcoming Contests</h3>
+        <ul>
+          <li>AtCoder Beginner Contest 320 – 21 Aug, 12:00 PM JST</li>
+          <li>AtCoder Regular Contest 140 – 28 Aug, 12:00 PM JST</li>
+        </ul>
+      </div>
+      <div class="past-contests">
+        <h3>Past Contests</h3>
+        <ul>
+          <li>AtCoder Beginner Contest 319 – 14 Aug, Completed</li>
+          <li>AtCoder Grand Contest 056 – 7 Aug, Completed</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Codewars -->
+  <section class="platform" id="codewars" tabindex="-1">
+    <div class="platform-banner">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.S8kU--6dpFwE-MIFZ085JwHaD4?pid=Api&P=0&h=180" alt="Codewars">
+      <h2>Codewars</h2>
+    </div>
+    <div class="contest-process">
+      <strong>Contest Process:</strong>
+      <ol>
+        <li>Participate in Kata Battles and timed challenges.</li>
+        <li>Rank up through successive problem completions.</li>
+        <li>Engage in multiplayer timed matches.</li>
+        <li>Track wins/losses and challenges.</li>
+        <li>Improve through community discussions and solutions.</li>
+      </ol>
+    </div>
+    <div class="contest-info-wrapper">
+      <div class="contest-details">
+        <div><strong>Duration:</strong> Variable</div>
+        <div><strong>Start Date:</strong> 2025‑08‑25 17:00 UTC</div>
+        <div><strong>End Date:</strong> 2025‑08‑25 20:00 UTC</div>
+      </div>
+      <div class="contest-timer-block">
+        <div class="contest-timer">
+          Starts In: <span class="timer" data-contest-time="2025-08-25T17:00:00Z">Loading...</span>
+        </div>
+        <a href="https://www.codewars.com" target="_blank" class="contest-link" rel="noopener">Go to Contests →</a>
+      </div>
+    </div>
+    <div class="contest-lists">
+      <div class="upcoming-contests">
+        <h3>Upcoming Contests</h3>
+        <ul>
+          <li>Kata Battle #1250 – 25 Aug, 5:00 PM UTC</li>
+          <li>Ranked Match – 1 Sept, 6:00 PM UTC</li>
+        </ul>
+      </div>
+      <div class="past-contests">
+        <h3>Past Contests</h3>
+        <ul>
+          <li>Kata Battle #1249 – 18 Aug, Completed</li>
+          <li>Ranked Match – 11 Aug, Completed</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. CodinGame -->
+  <section class="platform" id="codingame" tabindex="-1">
+    <div class="platform-banner">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.sbgdy-ZTrB1cXYM5OT2IgwHaEo?pid=Api&P=0&h=180" alt="CodinGame">
+      <h2>CodinGame</h2>
+    </div>
+    <div class="contest-process">
+      <strong>Contest Process:</strong>
+      <ol>
+        <li>Participate in algorithmic challenges with game-like interface.</li>
+        <li>Leaderboards track points and ranks over contests.</li>
+        <li>Access coaching mode to improve skills.</li>
+        <li>Engage in coding battles and multiplayer challenges.</li>
+        <li>Review tutorials and community solutions.</li>
+      </ol>
+    </div>
+    <div class="contest-info-wrapper">
+      <div class="contest-details">
+        <div><strong>Duration:</strong> 3 hours</div>
+        <div><strong>Start Date:</strong> 2025‑08‑27 19:30 UTC</div>
+        <div><strong>End Date:</strong> 2025‑08‑27 22:30 UTC</div>
+      </div>
+      <div class="contest-timer-block">
+        <div class="contest-timer">
+          Starts In: <span class="timer" data-contest-time="2025-08-27T19:30:00Z">Loading...</span>
+        </div>
+        <a href="https://www.codingame.com/contests" target="_blank" class="contest-link" rel="noopener">Go to Contests →</a>
+      </div>
+    </div>
+    <div class="contest-lists">
+      <div class="upcoming-contests">
+        <h3>Upcoming Contests</h3>
+        <ul>
+          <li>Spring Challenge – 27 Aug, 7:30 PM UTC</li>
+          <li>Multiplayer Challenge – 5 Sept, 8:00 PM UTC</li>
+        </ul>
+      </div>
+      <div class="past-contests">
+        <h3>Past Contests</h3>
+        <ul>
+          <li>Fall Challenge – 1 June, Completed</li>
+          <li>Winter Clash – 15 Dec, Completed</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  </main>
+  <!-- Right side quick lookup -->
+  <aside id="quick-lookup" aria-label="Quick contest lookup">
+    <h1>Quick LookUp</h1>
+    <ul>
+      <li data-target="geeksforgeeks" tabindex="0"><span class="name">GFG</span><span class="timer" data-contest-time="2025-08-10T15:00:00+05:30">--</span></li>
+      <li data-target="topcoder" tabindex="0"><span class="name">TopCoder</span><span class="timer" data-contest-time="2025-08-15T18:00:00Z">--</span></li>
+      <li data-target="hackerrank" tabindex="0"><span class="name">HackerRank</span><span class="timer" data-contest-time="2025-08-22T14:00:00Z">--</span></li>
+      <li data-target="icpc" tabindex="0"><span class="name">ICPC</span><span class="timer" data-contest-time="2025-09-01T09:00:00Z">--</span></li>
+      <li data-target="codechef" tabindex="0"><span class="name">CodeChef</span><span class="timer" data-contest-time="2025-08-28T10:30:00Z">--</span></li>
+      <li data-target="leetcode" tabindex="0"><span class="name">LeetCode</span><span class="timer" data-contest-time="2025-08-18T20:30:00Z">--</span></li>
+      <li data-target="codeforces" tabindex="0"><span class="name">Codeforces</span><span class="timer" data-contest-time="2025-08-13T16:00:00Z">--</span></li>
+      <li data-target="atcoder" tabindex="0"><span class="name">AtCoder</span><span class="timer" data-contest-time="2025-08-21T03:00:00Z">--</span></li>
+      <li data-target="codewars" tabindex="0"><span class="name">Codewars</span><span class="timer" data-contest-time="2025-08-25T17:00:00Z">--</span></li>
+      <li data-target="codingame" tabindex="0"><span class="name">CodinGame</span><span class="timer" data-contest-time="2025-08-27T19:30:00Z">--</span></li>
+    </ul>
+  </aside>
+  </div>
+ <footer class="footer-bottom">
+  <p>© 2025 <span class="brand-highlight">Tech360 Pvt Ltd</span>. All rights reserved.</p>
+</footer>
+  <script>
+    // Countdown timer script
+    function updateTimers() {
+      const now = new Date();
+
+      // Update each timer for contests
+      document.querySelectorAll('.timer').forEach(timer => {
+        const contestTime = new Date(timer.dataset.contestTime);
+        const diff = contestTime - now;
+        if(diff > 0) {
+          const days = Math.floor(diff / (1000*60*60*24));
+          const hours = Math.floor((diff / (1000*60*60)) % 24);
+          const minutes = Math.floor((diff / (1000*60)) % 60);
+          const seconds = Math.floor((diff / 1000) % 60);
+
+          timer.textContent =
+            (days > 0 ? days + "d " : "") +
+            (hours < 10 ? "0" + hours : hours) + "h " +
+            (minutes < 10 ? "0" + minutes : minutes) + "m " +
+            (seconds < 10 ? "0" + seconds : seconds) + "s";
+        } else {
+          timer.textContent = "Ongoing or Completed";
+        }
+      });
+    }
+
+    setInterval(updateTimers, 1000);
+    updateTimers();
+
+    // Smooth scroll and focus on platform sections from quick lookup
+    document.querySelectorAll('#quick-lookup ul li').forEach(item => {
+      item.addEventListener('click', () => {
+        const targetId = item.getAttribute('data-target');
+        if(targetId) {
+          const targetElem = document.getElementById(targetId);
+          if (targetElem) {
+            targetElem.scrollIntoView({behavior: 'smooth', block: 'start'});
+            // Focus for accessibility; prevent default scroll
+            targetElem.focus({preventScroll:true});
+          }
+        }
+      });
+      // Keyboard accessibility - Enter or Space to activate
+      item.addEventListener('keydown', (e) => {
+        if(e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          item.click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

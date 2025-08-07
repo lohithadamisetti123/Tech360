@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>C Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+
+    body {
+      background: linear-gradient(135deg, #e9c76a, #fdf5d9, #e9c76a);
+      padding: 30px;
+      color: #3b3b3b;
+      overflow-x: hidden;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 40px;
+      color: #8b6f2f;
+      text-shadow: 1px 1px 1px #f5f5dc;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .project-card {
+      background: #fffaf0;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(139, 111, 47, 0.2);
+      border: 1px solid #e9c76a;
+      opacity: 0;
+      animation: fadeInUp 1s forwards;
+    }
+
+    .project-card:nth-child(odd) {
+      animation-name: slideInLeft;
+    }
+
+    .project-card:nth-child(even) {
+      animation-name: slideInRight;
+    }
+
+    .project-title {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #b28b32;
+    }
+
+    .project-description {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My C Projects</h1>
+
+  <div class="projects-container">
+
+    <div class="project-card">
+      <div class="project-title">1. Mini Shell</div>
+      <div class="project-description">
+        A lightweight command-line interpreter implemented in C. Supports built-in commands, process creation with `fork()`, and command chaining using `|`. Demonstrates process control and string parsing.
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">2. Sudoku Solver</div>
+      <div class="project-description">
+        A backtracking-based solver for 9x9 Sudoku puzzles. Efficiently fills the grid by checking row, column, and box constraints. Reinforces recursion and constraint satisfaction concepts.
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">3. File Compression (Huffman)</div>
+      <div class="project-description">
+        Implementation of Huffman coding to compress text files. Uses frequency tables and binary trees to reduce file size without data loss. Good for understanding greedy algorithms and trees.
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">4. Student Record System</div>
+      <div class="project-description">
+        A console-based system for managing student records. Allows adding, deleting, updating, and viewing records stored in files. Demonstrates file I/O and struct usage in C.
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">5. Snake Game (Console)</div>
+      <div class="project-description">
+        A classic snake game using `ncurses` for UI. Features real-time movement, food generation, and score tracking. Showcases loops, conditionals, and terminal-based graphics.
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">6. Bank Management System</div>
+      <div class="project-description">
+        Simulates basic banking operations like deposit, withdrawal, and account creation. Uses file storage for account data. Emphasizes data structures and modular programming.
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">7. Calendar Generator</div>
+      <div class="project-description">
+        A CLI tool that prints formatted monthly calendars. Computes leap years and starting days accurately. Focuses on date logic and formatting output in C.
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">8. Tic Tac Toe</div>
+      <div class="project-description">
+        Console-based multiplayer Tic Tac Toe game. Includes turn-based logic and win/tie detection. Great for learning conditionals and array manipulation.
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
