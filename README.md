@@ -6,7 +6,7 @@ Tech360 is a static informational website designed to guide students through eve
 
 ## 🌐 Live Preview
 
-[Visit Tech360 Website](#) *(Replace with your deployed URL)*
+[Visit Tech360 Website](https://lohithadamisetti123.github.io/Tech360/)
 
 ---
 
